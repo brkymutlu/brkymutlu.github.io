@@ -1,0 +1,1693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+    <style>
+        /* navbar başlangıç*/
+
+        html {
+            overflow-x: hidden;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Rubik', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: black;
+            padding: 20px;
+
+        }
+
+        .hid1 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: #eee;
+            font-family: 'Rubik', sans-serif;
+            font-weight: 400;
+            font-size: 1.2rem;
+            display: flex;
+            margin-right: 30px;
+            justify-content: center;
+        }
+
+        .list-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+
+        }
+
+        .list-item li a {
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-family: 'Rubik', sans-serif;
+            font-weight: 400;
+        }
+
+
+        .drop-con:hover .dropbox {
+            display: block;
+        }
+
+        .drop-con-hid {
+            display: flex;
+        }
+
+        .fa-chevron-down {
+            color: #eee;
+            font-size: .7rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dropbox {
+            width: 250px;
+            height: auto;
+            display: none;
+            box-shadow: 2px 2px 8px black;
+            z-index: 10;
+            background-color: white;
+            position: absolute;
+        }
+
+        .dropbox a {
+            display: flex;
+            padding-left: 10px;
+            color: rgba(0, 0, 0, 0.305);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-family: 'Rubik', sans-serif;
+            font-weight: 400;
+            padding-top: 5px;
+            padding-bottom: 10px;
+
+        }
+
+        .drop-con2:hover .dropbox2 {
+            display: block;
+        }
+
+        .drop-con-hid2 {
+            display: flex;
+        }
+
+        .dropbox2 {
+            width: 300px;
+            padding-top: 5px;
+            height: 250px;
+            display: none;
+            box-shadow: 2px 2px 8px black;
+            z-index: 10;
+            background-color: white;
+            position: absolute;
+            overflow-y: scroll;
+        }
+
+        .dropbox2 a {
+            display: flex;
+            padding-left: 10px;
+            padding-bottom: 20px;
+            color: black;
+            text-decoration: none;
+            font-size: 1rem;
+            font-family: 'Rubik', sans-serif;
+            font-weight: 500;
+        }
+
+        .dropbox2 a:hover {
+            display: flex;
+            padding-right: 100px;
+            background-color: rgba(0, 0, 0, 0.13);
+            transition: 0.6s;
+        }
+
+        .dropbox a:hover {
+            display: flex;
+            color: black;
+            background-color: rgba(0, 0, 0, 0.13);
+            transition: 0.5s;
+            padding-right: 100px;
+
+        }
+
+
+        .nav-hid2 {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-right: 450px;
+
+        }
+
+        .nav-hid2 li a {
+            color: #eee;
+            padding: 5px;
+        }
+
+        .nav-hid2 li a:hover {
+            border-radius: 20px;
+            background-color: #eeeeee49;
+            transition: 0.5s;
+        }
+
+        .language-hid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-hid3 {
+            display: flex;
+            margin-right: 30px;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-hid3 li a {
+            color: #eee;
+            padding: 5px;
+        }
+
+        .nav-hid3 li a:hover {
+            border-radius: 20px;
+            background-color: #eeeeee49;
+            transition: 0.5s;
+        }
+
+
+        .nav-hid4 {
+            justify-content: center;
+            display: flex;
+            gap: 20px;
+
+        }
+
+        .nav-hid4 .buton-oturum:hover {
+            border-radius: 20px;
+            background-color: #eeeeee49;
+            transition: 0.5s;
+        }
+
+        .buton-oturum {
+            padding: 3px;
+            border-radius: 10px;
+            background-color: black;
+            color: #eee;
+            border: none;
+            font-size: .7rem;
+            font-family: 'Rubik', sans-serif;
+            font-weight: 400;
+        }
+
+        .buton-kaydol {
+            height: 30px;
+            width: 70px;
+            padding: 3px;
+            border: none;
+            border-radius: 20px;
+            font-size: .7rem;
+            font-family: 'Rubik', sans-serif;
+            font-weight: 400;
+            background-color: #eee;
+            color: black;
+        }
+
+        .hid-home{
+            display: flex;
+            padding: 5px;
+            
+        }
+
+        .hid-car{
+            display: flex;
+            padding: 5px;
+        }
+
+        /* navbar sonu */
+
+        /* üst alan başlangıç */
+
+        .s-main-cont1 {
+            align-items: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-right: 300px;
+        }
+
+        .s-main-hid1 {
+
+            padding-left: 250px;
+            padding-top: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 1250px;
+        }
+
+        .s-card-bold-text {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        .s-card-light-text {
+            font-size: .96rem;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+
+        .s-main-hid1-button {
+            width: 180px;
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            color: #eee;
+            background-color: black;
+        }
+
+        .s-main-hid1-button:hover {
+            background-color: #0f0404d6;
+        }
+
+        .s-main-hid2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 1200px;
+            padding-left: 230px;
+            padding-top: 100px;
+        }
+
+        .s-card-bold-text2 {
+            width: 100%;
+            font-size: 1.9rem;
+            display: flex;
+            justify-content: baseline;
+            margin-bottom: 30px;
+        }
+
+        .s-main-inside-hid1 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .s-card-light-text2 {
+            font-size: .9rem;
+            margin-right: 50px;
+            font-weight: 300;
+        }
+
+
+        .s-card-light-text3 {
+            font-size: .9rem;
+            font-weight: 300;
+        }
+
+        .s-main-hid3 {
+            padding-top: 100px;
+            padding-left: 80px;
+            width: 900px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: baseline;
+        }
+
+        .s-card-bold-text3 {
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .s-card-light-text4 {
+            font-size: 1rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .s-card-main-inside-hid2 {
+            display: flex;
+
+        }
+
+        .s-card-uygulama1 {
+            font-size: 1rem;
+            margin-right: 30px;
+            position: relative;
+
+        }
+
+        .s-card-yolculuk1 {
+            font-size: 1rem;
+            position: relative;
+        }
+
+        .s-card-uygulama1::before {
+            content: "";
+            width: 140px;
+            height: .5px;
+            background-color: rgba(0, 0, 0, 0.106);
+            position: absolute;
+            bottom: 1px;
+            transition: 1s;
+        }
+
+        .s-card-uygulama1:hover::before {
+            width: 140px;
+            background-color: black;
+        }
+
+        .s-card-yolculuk1::before {
+            content: "";
+            width: 280px;
+            height: .5px;
+            background-color: rgba(0, 0, 0, 0.106);
+            position: absolute;
+            bottom: 1px;
+            transition: 1s;
+        }
+
+        .s-card-yolculuk1:hover::before {
+            width: 280px;
+            background-color: black;
+        }
+
+
+        /* üst alan bitiş */
+
+        /* orta alan başlangıç */
+
+        .s-main-cont2 {
+            display: flex;
+            flex-direction: column;
+            padding-top: 100px;
+            align-items: center;
+            padding-right: 100px;
+
+        }
+
+        .s-main-cont2-hidbox {
+            padding-left: 30px;
+            display: flex;
+        }
+
+        .s-main-cont2-card1 {
+            margin-right: 60px;
+
+        }
+
+        .s-main-cont2-bold-text1 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .s-main-cont2-light-text1 {
+            font-size: .8rem;
+            margin-bottom: 10px;
+        }
+
+        .s-main-cont2-link-text1 {
+            font-size: .9rem;
+            position: relative;
+        }
+
+        .s-main-cont2-card2 {
+            margin-right: 80px;
+
+        }
+
+        .s-main-cont2-bold-text2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .s-main-cont2-light-text2 {
+            font-size: .8rem;
+            margin-bottom: 10px;
+        }
+
+        .s-main-cont2-link-text2 {
+            font-size: .9rem;
+            position: relative;
+        }
+
+        .s-main-cont2-card3 {}
+
+        .s-main-cont2-bold-text3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .s-main-cont2-light-text3 {
+            font-size: .8rem;
+            margin-bottom: 10px;
+        }
+
+        .s-main-cont2-link-text3 {
+            font-size: .9rem;
+            position: relative;
+        }
+
+        .s-main-cont2-link-text1::before {
+            content: "";
+            width: 100px;
+            height: .5px;
+            background-color: rgba(0, 0, 0, 0.106);
+            position: absolute;
+            bottom: 1px;
+            transition: 1s;
+        }
+
+        .s-main-cont2-link-text1:hover::before {
+            width: 100px;
+            background-color: black;
+        }
+
+        .s-main-cont2-link-text2::before {
+            content: "";
+            width: 100px;
+            height: .5px;
+            background-color: rgba(0, 0, 0, 0.106);
+            position: absolute;
+            bottom: 1px;
+            transition: 1s;
+        }
+
+        .s-main-cont2-link-text2:hover::before {
+            width: 100px;
+            background-color: black;
+        }
+
+        .s-main-cont2-link-text3::before {
+            content: "";
+            width: 100px;
+            height: .5px;
+            background-color: rgba(0, 0, 0, 0.106);
+            position: absolute;
+            bottom: 1px;
+            transition: 1s;
+        }
+
+        .s-main-cont2-link-text3:hover::before {
+            width: 100px;
+            background-color: black;
+        }
+
+        .s-main-cont2-hidbox2 {
+            display: flex;
+            padding-top: 50px;
+            justify-content: space-between;
+            width: 1300px;
+            padding: 100px 170px;
+            position: relative;
+        }
+
+        .hidden44{
+            position: absolute;
+            right: 270px;
+            top: 1300px;
+        }        
+
+        .s-main-cont2-1-card-1 {
+            width: 310px;
+
+
+        }
+
+        .s-main-cont2-1-bold-text1 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .s-main-cont2-1-light-text1 {
+            font-size: .8rem;
+            margin-bottom: 10px;
+        }
+
+        .s-main-cont2-1-link-text1 {
+            font-size: .8rem;
+            position: relative;
+        }
+
+        .s-main-cont2-1-card-2 {
+            width: 400px;
+            margin-left: 40px;
+
+
+        }
+
+        .s-main-cont2-1-bold-text2 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .s-main-cont2-1-light-text2 {
+            font-size: .9rem;
+            margin-bottom: 10px;
+        }
+
+        .s-main-cont2-1-link-text2 {
+            font-size: .8rem;
+            position: relative;
+        }
+
+        .s-main-cont2-1-card-3 {
+            width: 290px;
+            margin-left: 40px;
+
+        }
+
+        .s-main-cont2-1-bold-text3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .s-main-cont2-1-light-text3 {
+            font-size: .7rem;
+            margin-bottom: 10px;
+        }
+
+        .s-main-cont2-1-link-text3 {
+            font-size: .8rem;
+            position: relative;
+        }
+
+        .s-main-cont2-1-link-text1::before {
+            content: "";
+            width: 250px;
+            height: .5px;
+            background-color: rgba(0, 0, 0, 0.106);
+            position: absolute;
+            bottom: 1px;
+            transition: 1s;
+        }
+
+        .s-main-cont2-1-link-text1:hover::before {
+            width: 250px;
+            background-color: black;
+        }
+
+        .s-main-cont2-1-link-text1::before {
+            content: "";
+            width: 250px;
+            height: .5px;
+            background-color: rgba(0, 0, 0, 0.106);
+            position: absolute;
+            bottom: 1px;
+            transition: 1s;
+        }
+
+        .s-main-cont2-1-link-text2:hover::before {
+            width: 70px;
+            background-color: black;
+        }
+
+        .s-main-cont2-1-link-text2::before {
+            content: "";
+            width: 70px;
+            height: .5px;
+            background-color: rgba(0, 0, 0, 0.106);
+            position: absolute;
+            bottom: 1px;
+            transition: 1s;
+        }   
+
+        .s-main-cont2-1-link-text3::before {
+            content: "";
+            width: 160px;
+            height: .5px;
+            background-color: rgba(0, 0, 0, 0.106);
+            position: absolute;
+            bottom: 1px;
+            transition: 1s;
+        }
+
+        .s-main-cont2-1-link-text3:hover::before {
+            width: 160px;
+            background-color: black;
+        }
+
+       
+
+        
+
+        /* orta alan bitiş */
+
+        /* alt alan başlangıç */
+
+        .s-main-cont3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .s-main-cont3-baslik {
+            font-size: 2.3rem;
+            font-weight: 600;
+            margin-right: 520px;
+            margin-bottom: 30px;
+        }
+
+        .s-main-cont3-hidden1 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-left: 50px;
+        }
+
+        .s-main-cont3-hidden1-card1 {
+            display: flex;
+            flex-direction: column;
+            width: 600px;
+
+
+
+        }
+
+        .s-main-cont3-bold-text1 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .s-main-cont3-light-text1 {
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .s-main-cont3-link1 {
+            position: relative;
+        }
+
+        .s-main-cont3-link1::before {
+            content: "";
+            width: 170px;
+            height: .5px;
+            background-color: rgba(0, 0, 0, 0.106);
+            position: absolute;
+            bottom: 1px;
+            transition: 1s;
+        }
+
+        .s-main-cont3-link1:hover::before {
+            width: 170px;
+            background-color: black;
+        } 
+
+
+
+        .s-main-cont3-hidden1-card2 {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+
+
+        }
+
+        .s-main-cont3-bold-text2 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .s-main-cont3-light-text2 {
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .s-main-cont3-link2 {
+            position: relative;
+        }
+
+        .s-main-cont3-link2::before {
+            content: "";
+            width: 200px;
+            height: .5px;
+            background-color: rgba(0, 0, 0, 0.106);
+            position: absolute;
+            bottom: 1px;
+            transition: 1s;
+        }
+
+        .s-main-cont3-link2:hover::before {
+            width: 200px;
+            background-color: black;
+        } 
+
+
+        .s-main-cont3-baslik2 {
+            font-size: 2.3rem;
+            font-weight: 600;
+            margin-right: 690px;
+            margin-bottom: 30px;
+            margin-top: 100px;
+        }
+
+        .s-main-cont3-hidden2 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-left: 30px;
+        }
+
+        .s-main-cont3-hidden2-card1 {
+            display: flex;
+            flex-direction: column;
+            width: 550px;
+            margin-right: 50px;
+
+
+
+        }
+
+        .s-main-cont3-bold-text3 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .s-main-cont3-light-text3 {
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .s-main-cont3-link3 {
+            position: relative;
+        }
+
+        .s-main-cont3-link3::before {
+            content: "";
+            width: 180px;
+            height: .5px;
+            background-color: rgba(0, 0, 0, 0.106);
+            position: absolute;
+            bottom: 1px;
+            transition: 1s;
+        }
+
+        .s-main-cont3-link3:hover::before {
+            width: 180px;
+            background-color: black;
+        } 
+
+        .s-main-cont3-hidden2-card2 {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+
+
+        }
+
+        .s-main-cont3-bold-text4 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .s-main-cont3-light-text4 {
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .s-main-cont3-link4 {
+            position: relative;
+        }
+
+        .s-main-cont3-link4::before {
+            content: "";
+            width: 230px;
+            height: .5px;
+            background-color: rgba(0, 0, 0, 0.106);
+            position: absolute;
+            bottom: 1px;
+            transition: 1s;
+        }
+
+        .s-main-cont3-link4:hover::before {
+            width: 230px;
+            background-color: black;
+        } 
+
+        .s-main-cont3-baslik3 {
+            font-size: 2.3rem;
+            font-weight: 600;
+            margin-right: 500px;
+            margin-bottom: 30px;
+            margin-top: 100px;
+        }
+
+        .s-main-cont3-hidden3 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-left: 30px;
+        }
+
+        .s-main-cont3-hidden3-card1 {
+            display: flex;
+            flex-direction: column;
+            width: 550px;
+            margin-right: 50px;
+
+
+
+        }
+
+        .s-main-cont3-bold-text5 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .s-main-cont3-light-text5 {
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .s-main-cont3-link5 {
+            position: relative;
+        }
+
+        .s-main-cont3-link5::before {
+            content: "";
+            width: 330px;
+            height: .5px;
+            background-color: rgba(0, 0, 0, 0.106);
+            position: absolute;
+            bottom: 1px;
+            transition: 1s;
+        }
+
+        .s-main-cont3-link5:hover::before {
+            width: 330px;
+            background-color: black;
+        } 
+
+        .s-main-cont3-hidden3-card2 {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+
+
+        }
+
+        .s-main-cont3-bold-text6 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .s-main-cont3-light-text6 {
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .s-main-cont3-link6 {
+            position: relative;
+        }
+
+        .s-main-cont3-link6::before {
+            content: "";
+            width: 190px;
+            height: .5px;
+            background-color: rgba(0, 0, 0, 0.106);
+            position: absolute;
+            bottom: 1px;
+            transition: 1s;
+        }
+
+        .s-main-cont3-link6:hover::before {
+            width: 190px;
+            background-color: black;
+        } 
+
+        .s-main-cont3-baslik4 {
+            font-size: 2.3rem;
+            font-weight: 600;
+            margin-right: 160px;
+            margin-bottom: 30px;
+            margin-top: 100px;
+        }
+
+        .s-main-cont3-hidden4 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-left: 30px;
+        }
+
+        .s-main-cont3-hidden4-card1 {
+            display: flex;
+            flex-direction: column;
+            width: 550px;
+            margin-right: 50px;
+
+
+
+        }
+
+        .s-main-cont3-bold-text7 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .s-main-cont3-light-text7 {
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .s-main-cont3-link7 {
+            position: relative;
+        }
+
+        .s-main-cont3-link7::before {
+            content: "";
+            width: 190px;
+            height: .5px;
+            background-color: rgba(0, 0, 0, 0.106);
+            position: absolute;
+            bottom: 1px;
+            transition: 1s;
+        }
+
+        .s-main-cont3-link7:hover::before {
+            width: 190px;
+            background-color: black;
+        } 
+
+        .s-main-cont3-hidden5-card2 {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+
+
+        }
+
+        .s-main-cont3-bold-text8 {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .s-main-cont3-light-text8 {
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .s-main-cont3-link8 {
+            position: relative;
+        }
+
+        .s-main-cont3-link8::before {
+            content: "";
+            width: 230px;
+            height: .5px;
+            background-color: rgba(0, 0, 0, 0.106);
+            position: absolute;
+            bottom: 1px;
+            transition: 1s;
+        }
+
+        .s-main-cont3-link8:hover::before {
+            width: 230px;
+            background-color: black;
+        } 
+
+        .s-main-cont4 {
+            padding: 150px 230px;
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        .s-main-cont4-hiddenplace {
+            display: flex;
+            width: 100%;
+        }
+
+        .s-kaydol1 {
+            display: flex;
+            position: relative;
+        }
+
+        .s-main-cont4-kaydol-bold1 {
+            font-size: 2.3rem;
+        }
+
+        .s-main-cont4-ok1 {
+            margin-left: 130px;
+            margin-top: 30px;
+        }
+
+        .s-main-cont4 a:hover .s-main-cont4-ok1{
+            animation: arrow 0.5s both
+        }
+
+        @keyframes arrow {
+            100%{
+                transform: translate(15px);
+            }
+        }
+        .s-main-cont4 a:hover .s-main-cont4-ok2{
+            animation: arrow 0.5s both
+        }
+
+        @keyframes arrow {
+            100%{
+                transform: translate(15px);
+            }
+        }
+
+        .s-kaydol2 {
+            display: flex;  
+            padding-left: 80px;
+            position: relative;
+
+        }
+
+        .s-main-cont4-kaydol-bold2 {
+            font-size: 2.3rem;
+        }
+
+        .s-main-cont4-ok2 {
+            margin-left: 200px;
+            margin-top: 30px;
+        }
+
+        .s-kaydol1::before {
+            content: "";
+            width: 500px;
+            height: .5px;
+            background-color: rgb(12, 0, 0);
+            position: absolute;
+            bottom: -20px;
+            transition: 1s;
+        }
+        .s-kaydol2::before {
+            content: "";
+            width: 500px;
+            height: .5px;
+            background-color: rgb(12, 0, 0);
+            position: absolute;
+            bottom: -20px;
+            transition: 1s;
+        }
+
+        .s-main-cont-hidden-text1{
+            padding-top: 100px;
+            font-weight: 300;
+        }
+
+        /* alt kısım bitiş */
+
+        /* footer başlangıç */
+
+        .main-footer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: black;
+        }
+
+        .logo-footer{
+            display: flex;
+            padding-right: 760px;
+            padding-top: 20px;
+            color: #eee;
+            font-family: 'Rubik', sans-serif;
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
+
+        .f-yazi{
+            display: flex;
+            padding-right: 645px;
+            padding-top: 20px;
+            color: #eee;
+            font-family: 'Rubik', sans-serif;
+            font-size: .75rem;
+            font-weight: 300;
+        }
+
+        .list-footer{
+            display: flex;
+            padding: 40px;
+            color: #eee;
+            font-family: 'Rubik', sans-serif;
+            font-size: .94rem;
+            
+        }
+
+        .list-footer li{
+            list-style: none;
+            margin-right: 109px;
+            margin-top: 15px;
+
+            
+        }
+
+        .list-footer a{
+            text-decoration: none;
+            color: #eee;
+            font-size: .7rem;
+            font-weight: 300;
+        }
+
+        .list-footer a:hover{
+            color: #eeeeee6c;
+        }
+
+        .sosyal-footer{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sosyal-footer a:hover{
+            border-radius: 10px;
+            background-color: #eeeeee73;
+        }
+
+        .sosyal-footer a{
+            text-decoration: none;
+            color: #eee;
+            padding: 10px;
+            margin: 20px;
+        }
+
+        .sosyal-footer-div{
+            padding-right: 250px;
+        }
+
+        .app-footer{
+            margin-right: 604px;
+        }
+
+        .hukum-footer{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 40px;
+        }
+
+        .app-footer2{
+            width: 110px;
+            padding-left: 10px;
+            padding-top: 30px;
+        }
+
+        .gizlilik-hid{
+            display: flex;
+            
+        }
+
+        .trademark-hid{
+            padding-right: 100px;
+        }
+        
+        .gizlilik-hid a{
+            text-decoration: none;
+            color: #eeeeee57;
+            font-size: .6rem;
+            padding-left: 30px;
+        }
+
+        .gizlilik-hid a:hover{
+            color: #eeeeee1f;
+        }
+
+        .main-div{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-hid1">
+                <ul class="list-item">
+                    <div class="nav-hid2">
+                        <div class="logo">
+                            <a href="index.html">Uber</a>
+                        </div>
+                        <div class="drop-con">
+                            <div class="drop-con-hid">
+                                <li><a class="dropdown" href="">Şirket</a></li>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                            <div class="dropbox">
+                                <div><a target="_blank" href="hakkımızda.html">Hakkımızda</a></div>
+                                <div><a target="_blank" href="sunduklarımız.html">Sunduklarımız</a></div>
+                                <div><a href="">Uber nasıl çalışır?</a></div>
+                                <div><a href="">Küresel vatandaşlık</a></div>
+                                <div><a href="">Güncel haberler</a></div>
+                                <div><a href="">Yatırımcı ilişkileri</a></div>
+                                <div><a target="_blank" href="blog.html">Blog</a></div>
+                                <div><a href="">Kariyer Fırsatları</a></div>
+                            </div>
+                        </div>
+                        <li><a href="">Güvenlik</a></li>
+                        <li><a href="">Yardım</a></li>
+                    </div>
+                    <div class="nav-hid3">
+                        <div class="language-hid">
+                            <i style="color: #eee; font-size: .8rem;" class="fa-solid fa-globe"></i>
+                            <li><a href="">TR-TR</a></li>
+                        </div>
+                        <div class="drop-con2">
+                            <li class="dropdown2"><a href="">ürünler</a></li>
+                            <div class="dropbox2">
+                                <div class="hid-home">
+                                    <i style="font-size: .8rem;" class="fa-solid fa-house"></i>
+                                    <a href="">Ana Sayfa</a>
+                                </div>
+                                <div class="hid-car">
+                                    <i style="font-size: .8rem;" class="fa-solid fa-car"></i>
+                                    <a href="">Yolculuk</a>
+                                </div>
+                                <div class="hid-car">
+                                    <i style="font-size: .8rem;" class="fa-solid fa-car"></i>
+                                    <a href="">Araç sürün</a>
+                                </div>
+                                <div class="hid-car">
+                                    <i style="font-size: .8rem;" class="fa-solid fa-utensils"></i>
+                                    <a href="">Yemek siparişi verin</a>
+                                </div>
+                                <div class="hid-car">
+                                    <i style="font-size: .8rem;" class="fa-solid fa-wine-glass"></i>
+                                    <a href="">Dükkanlar</a>
+                                </div>
+                                <div class="hid-car">
+                                    <i style="font-size: .8rem;" class="fa-solid fa-bus"></i>
+                                    <a href="">Freight</a>
+                                </div>
+                                <div class="hid-car">
+                                    <i style="font-size: .8rem;" class="fa-solid fa-bicycle"></i>
+                                    <a href="">Bisiklet ve scooter</a>
+                                </div>
+                                <div class="hid-car">
+                                    <i style="font-size: .8rem;" class="fa-solid fa-briefcase"></i>
+                                    <a href="">İşletme</a>
+                                </div>
+                                <div class="hid-car">
+                                    <i style="font-size: .8rem;" class="fa-solid fa-money-bill"></i>
+                                    <a href="">Para</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-hid4">
+                        <button class="buton-oturum" type="submit">Oturum Açın</button>
+                        <button class="buton-kaydol" type="submit">Kaydolun</button>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <!-- üst alan başlangıç -->
+        
+        <div class="main-div">
+            <div class="s-main-cont1">
+                <div class="s-main-hid1">
+                    <div class="s-card-bold-text">Uber’in sunduğu teknolojiler</div>
+                    <div class="s-card-light-text">İnsanların nasıl araç çağırabileceğini ve bir yerden bir yere nasıl
+                        ulaşabileceklerini değiştirmek yalnızca bir başlangıç.</div>
+                    <form action="">
+                        <button class="s-main-hid1-button" type="submit">Uygulamayı keşfedin</button>
+                    </form>
+                </div>
+                <div class="s-main-hid2">
+                    <div class="s-card-bold-text2">Uber uygulamaları, ürünleri ve diğer hizmetler</div>
+                    <div class="s-main-inside-hid1">
+                        <div class="s-card-light-text2">Uber, misyonu dünyanın nasıl daha iyi hareket edebileceğini yeniden
+                            tasarlamak olan bir teknoloji şirketidir. Teknolojimiz, yolculuk yapmak isteyen tüketicilerle
+                            bağımsız yolculuk hizmeti sağlayıcıları ve bunun yanı sıra toplu taşıma, bisiklet ve scooter
+                            gibi başka ulaşım araçlarını eşleştiren çok taraflı platformlar geliştirmemize ve sürdürmemize
+                            yardımcı olur.
+                        </div>
+                        <div class="s-card-light-text3">Ayrıca tüketicileri, restoranlar, marketler ve diğer dükkânlarla bir
+                            araya getirerek yemek, market ürünleri ve diğer malları satın almalarını ve satmalarını
+                            sağlıyoruz, ardından onları bağımsız teslimat hizmeti sağlayıcılarıyla eşleştiriyoruz. Buna ek
+                            olarak Uber, taşımacılık sektöründeki göndericiler ile taşıyıcılar arasında bağlantı da kuruyor.
+                            <br><br>
+    
+                            Teknolojimiz, tüm dünyada 70’i aşkın ülkede ve 10.000’i aşkın şehirde insanların birbiriyle
+                            bağlantı kurmasına ve hareket etmesine yardımcı oluyor.
+    
+                        </div>
+                    </div>
+                </div>
+                <div class="s-main-hid3">
+                    <div class="s-card-bold-text3">Uber'in en popüler yolculuk seçenekleri</div>
+                    <div class="s-card-light-text4">Araç çağırın, araca binin ve yolculuğa başlayın.
+                    </div>
+                    <div class="s-card-main-inside-hid2">
+                        <div class="s-card-uygulama1">Uygulamayı indirin
+                        </div>
+                        <div class="s-card-yolculuk1">Diğer yolculuk seçeneklerine göz atın
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        <!-- üst alan bitiş -->
+
+        <!-- orta alan başlangıç -->
+
+        <div class="s-main-cont2">
+            <div class="s-main-cont2-hidbox">
+                <div class="hidden44">
+                    <div style="position: absolute; right: 80px; top: 8px;" class="numbers">1/2</div>
+                    <i style="font-size: 2rem; color: #c4c2c2;" class="fa-solid fa-circle-chevron-left"></i>
+                    <i style="font-size: 2rem; color: #c4c2c2; transition: 1s;" class="fa-solid fa-circle-chevron-right"></i>   
+                </div> 
+                <div class="s-main-cont2-card1">
+                    <div class="s-main-cont2-img1">
+                        <img style="width: 250px;" src="vendor/img/uber/UberX_4k-16x9.webp" alt="">
+                    </div>
+                    <div class="s-main-cont2-bold-text1">UberX</div>
+                    <div class="s-main-cont2-light-text1">Sadece size özel, hesaplı yolculuklar</div>
+                    <div class="s-main-cont2-link-text1">Daha fazla bilgi</div>
+                </div>
+                <div class="s-main-cont2-card2">
+                    <div class="s-main-cont2-img2">
+                        <img style="width: 250px;" src="vendor/img/uber/Pool_4k-16x9.webp" alt="">
+                    </div>
+                    <div class="s-main-cont2-bold-text2">UberX Paylaşım</div>
+                    <div class="s-main-cont2-light-text2">Aracınızı her seferinde en fazla bir yolcuyla paylaşın
+                    </div>
+                    <div class="s-main-cont2-link-text2">Daha fazla bilgi</div>
+                </div>
+                <div class="s-main-cont2-card3">
+                    <div class="s-main-cont2-img3">
+                        <img style="width: 250px;" src="vendor/img/uber/UberX_4k-16x9.webp" alt="">
+                    </div>
+                    <div class="s-main-cont2-bold-text3">Uber Comfort</div>
+                    <div class="s-main-cont2-light-text3">Daha fazla diz mesafesi olan daha yeni araçlar</div>
+                    <div class="s-main-cont2-link-text3">Daha fazla bilgi</div>
+                </div>
+            </div>
+            <div class="s-main-cont2-hidbox2">
+                <div class="s-main-cont2-1-card-1">
+                    <div class="s-main-cont2-1-img1">
+                        <img src="vendor/img/uber/shield.svg" alt="">
+                    </div>
+                    <div class="s-main-cont2-1-bold-text1">Güvenlik</div>
+                    <div class="s-main-cont2-1-light-text1">Uygulamayı gönül rahatlığıyla kullanmanız için tasarladık.
+                    </div>
+                    <div class="s-main-cont2-1-link-text1">Güvenlik hakkında daha fazla bilgi edinin
+                    </div>
+                </div>
+                <div class="s-main-cont2-1-card-2">
+                    <div class="s-main-cont2-1-img2">
+                        <img src="vendor/img/uber/globe-filled.svg" alt="">
+                    </div>
+                    <div class="s-main-cont2-1-bold-text2">Şehirler</div>
+                    <div class="s-main-cont2-1-light-text2">10.000’den fazla şehirde kullanılabilir.
+                    </div>
+                    <div class="s-main-cont2-1-link-text2">Şehir bulun
+                    </div>
+                </div>
+                <div class="s-main-cont2-1-card-3">
+                    <div class="s-main-cont2-1-img3">
+                        <img src="vendor/img/uber/airplane_depart-filled.svg" alt="">
+                    </div>
+                    <div class="s-main-cont2-1-bold-text3">Havalimanları</div>
+                    <div class="s-main-cont2-1-light-text3">1600’den fazla havalimanında yolculuk imkanı
+                    </div>
+                    <div class="s-main-cont2-1-link-text3">Tüm havalimanlarını görün
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- orta alan bitiş -->
+
+        <!-- alt alan başlangıç -->
+
+        <div class="s-main-cont3">
+            <div class="s-main-cont3-baslik">Talep üzerine yemek teslimatı</div>
+            <div class="s-main-cont3-hidden1">
+                <div class="s-main-cont3-hidden1-card1">
+                    <div class="s-main-cont3-p1">
+                        <img style="width: 500px;" src="vendor/img/uber/UberEats1.webp" alt="">
+                    </div>
+                    <div class="s-main-cont3-bold-text1">Uber Eats</div>
+                    <div class="s-main-cont3-light-text1">Web üzerinden veya Uber uygulamasını kullanarak en sevdiğiniz
+                        restoranlardan yemek siparişi verin. Restoranlar siparişinizi hazırlar ve yakınlardaki bir kurye
+                        siparişinizi kapınıza kadar getirir.</div>
+                    <div class="s-main-cont3-link1">Uber Eats’i ziyaret edin
+                    </div>
+                </div>
+                <div class="s-main-cont3-hidden1-card2">
+                    <div class="s-main-cont3-p2">
+                        <img style="width: 500px;"
+                            src="vendor/img/uber/SCENARIO-4_RESTAURANT_FOOD-PICK-UP_0437-large-1-3_2.webp" alt="">
+                    </div>
+                    <div class="s-main-cont3-bold-text2">Restoranlar
+                    </div>
+                    <div class="s-main-cont3-light-text2">Uber Eats, restoranınızın işlerine gerçek bir katkı sağlar.
+                        Yemekleriniz uygulamada görünür, yeni müşteriler restoranınızı keşfeder ve düzenli
+                        müşterileriniz, yemeklerinizin keyfini daha çok çıkarır. Uber uygulamasını kullanan kuryeler,
+                        yemekleri hızlıca teslim eder ve yemeklerin kalitesinin en iyi şekilde korunmasını sağlar.</div>
+                    <div class="s-main-cont3-link2">Uber Eats ile iş ortağı olun
+                    </div>
+                </div>
+            </div>
+            <div class="s-main-cont3-baslik2">Uber ile para kazanın</div>
+            <div class="s-main-cont3-hidden2">
+                <div class="s-main-cont3-hidden2-card1">
+                    <div class="s-main-cont3-p1">
+                        <img style="width: 500px;" src="vendor/img/uber/kadınsürücü.webp" alt="">
+                    </div>
+                    <div class="s-main-cont3-bold-text3">Uber’le araç sürün
+                    </div>
+                    <div class="s-main-cont3-light-text3">En büyük etkin yolcu ağına sahip platformla yolda geçirdiğiniz
+                        zamanı en iyi şekilde değerlendirin.</div>
+                    <div class="s-main-cont3-link3">Sürücü olarak kaydolun
+                    </div>
+                </div>
+                <div class="s-main-cont3-hidden2-card2">
+                    <div class="s-main-cont3-p2">
+                        <img style="width: 500px;" src="vendor/img/uber/gavat.webp" alt="">
+                    </div>
+                    <div class="s-main-cont3-bold-text4">Uber ile teslimat yapın
+                    </div>
+                    <div class="s-main-cont3-light-text4">Şehrinizi keşfederken Uber Eats uygulamasını kullanarak
+                        insanların istediği yemek siparişlerini ve diğer ürünleri teslim ederek para kazanın.</div>
+                    <div class="s-main-cont3-link4">Teslimat yapmak için kaydolun
+                    </div>
+                </div>
+            </div>
+            <div class="s-main-cont3-baslik3">Şehirleri birlikte ileriye taşıyoruz</div>
+            <div class="s-main-cont3-hidden3">
+                <div class="s-main-cont3-hidden3-card1">
+                    <div class="s-main-cont3-p1">
+                        <img style="width: 500px;" src="vendor/img/uber/tren.webp" alt="">
+                    </div>
+                    <div class="s-main-cont3-bold-text5">Herkes için toplu taşıma araçlarının geliştirilmesine yardımcı
+                        oluyoruz
+                    </div>
+                    <div class="s-main-cont3-light-text5">Uber, dünya genelindeki şehirlerin toplu taşıma sistemlerini
+                        daha erişilebilir, adil ve verimli hale getirmesine yardımcı olmaya kararlıdır.</div>
+                    <div class="s-main-cont3-link5">Uber Transit hakkında daha fazla bilgi edinin
+                    </div>
+                </div>
+                <div class="s-main-cont3-hidden3-card2">
+                    <div class="s-main-cont3-p2">
+                        <img style="width: 500px;" src="vendor/img/uber/kapı kolu.webp" alt="">
+                    </div>
+                    <div class="s-main-cont3-bold-text6">İhtiyacı olan kişilerin bakım hizmetlerine erişimini sağlıyoruz
+                    </div>
+                    <div class="s-main-cont3-light-text6">Üyelerine ve hastalarına esnek yolculuk planlama seçenekleri
+                        sunarak sağlık hizmetlerine erişmelerini sağlamak için sağlık kuruluşlarıyla iş birliği yaptık.
+                        Sağlık çalışanları, bakım hizmeti alacak olan hastaların veya bu hizmeti verecek olan
+                        bakıcıların, bakım hizmetinin verileceği yere gidip gelebilmeleri için, yolculukları tek bir
+                        kullanıcı panelinden planlayabilir.</div>
+                    <div class="s-main-cont3-link6">Uber Health’i ziyaret edin
+                    </div>
+                </div>
+            </div>
+            <div class="s-main-cont3-baslik4">İşletmelerin başarıya ulaşmasına yardımcı oluyoruz
+            </div>
+            <div class="s-main-cont3-hidden4">
+                <div class="s-main-cont3-hidden4-card1">
+                    <div class="s-main-cont3-p1">
+                        <img style="width: 500px;" src="vendor/img/uber/tır.webp" alt="">
+                    </div>
+                    <div class="s-main-cont3-bold-text7">Uber Freight
+                    </div>
+                    <div class="s-main-cont3-light-text7">Uber Freight taşıyıcı firmalarla yükleyici firmaları
+                        buluşturan, ücretsiz bir uygulamadır. Yükleyici firmalar, tek bir düğmeye dokunarak, taşımak
+                        istedikleri yüklerin rezervasyonunu anında yaparlar. Sabit fiyatlandırma sayesinde ise, taşıyıcı
+                        firmalar da her zaman ne kadar ödeme alacaklarını önceden bilir.</div>
+                    <div class="s-main-cont3-link7">Uber Freight’ı ziyaret edin
+                    </div>
+                </div>
+                <div class="s-main-cont3-hidden5-card2">
+                    <div class="s-main-cont3-p2">
+                        <img style="width: 500px;" src="vendor/img/uber/arabalı kadın toyota.webp" alt="">
+                    </div>
+                    <div class="s-main-cont3-bold-text8">Uber for Business
+                    </div>
+                    <div class="s-main-cont3-light-text8">Uber for Business, hem çalışanlarınıza hem de müşterilerinize
+                        sunduğunuz yolculuklar için, şirketinizin karayolu ulaşımı ihtiyaçlarını yönetmenizde size kolay
+                        bir yöntem sunar. İşletmeler için oluşturulmuştur ve otomatik faturalama, gider gösterme ve
+                        raporlama özellikleriyle çalışanlarınızın yolculuk etkinliklerini net bir şekilde görebilmenizi
+                        sağlar.</div>
+                    <div class="s-main-cont3-link8">Uber for Business’ı ziyaret edin
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="s-main-cont4">
+            <div class="s-main-cont4-hiddenplace">
+                <div class="s-kaydol1">
+                    <div class="s-main-cont4-kaydol-bold1">Yolculuk yapmak için kaydolun</div>
+                    <a href="">
+                        <div class="s-main-cont4-ok1">
+                            <img style="width: 40px;" src="vendor/img/uber/right-arrow-svgrepo-com.svg" alt="">
+                        </div>
+                    </a>
+                </div>
+                <div class="s-kaydol2">
+                    <div class="s-main-cont4-kaydol-bold2">Sürücü olarak kaydolun</div>
+                    <a href="">
+                        <div class="s-main-cont4-ok2">
+                            <img style="width: 40px;" src="vendor/img/uber/right-arrow-svgrepo-com.svg" alt="">
+                        </div>
+                    </a>   
+                </div>
+            </div>
+            <div class="s-main-cont-hidden-text1">Bu internet sayfasında sunulan içerik sadece bilgi amaçlıdır ve bulunduğunuz ülkede, bölgede ya da şehirde geçerli olmayabilir. Önceden bildirimde bulunulmaksızın değiştirilebilir ya da güncellenebilir.</div>
+        </div>
+    </div>
+        <!-- alt kısım bitiş -->
+    </main>
+        <!-- footer başlangıç -->
+    <footer>
+        <div class="main-footer">
+            <a href="index.html">
+                <div class="logo-footer">Uber</div> 
+            </a>
+            <div class="f-yazi">Yardım Merkezini Ziyaret Edin</div>
+            <div class="list-footer">
+                <div class="sirket-footer">Şirket
+                    <ul>
+                        <li><a target="_blank" href="hakkımızda.html">Hakkımızda</a></li>
+                        <li><a target="_blank" href="sunduklarımız.html">Sunduklarımız</a></li>
+                        <li><a href="">Güncel Haberler</a></li>
+                        <li><a href="">Yatırımcılar</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Kariyer Fırsatları</a></li>
+                        <li><a href="">AI</a></li>
+                        <li><a href="">Hediye Kartları</a></li>
+                    </ul>
+                </div>
+                <div class="urunler-footer">Ürünler
+                    <ul>
+                        <li><a href="">Yolculuk</a></li>
+                        <li><a href="">Araç sürün</a></li>
+                        <li><a href="">Yemek siparişi verin</a></li>
+                        <li><a href="">Uber for Business</a></li>
+                        <li><a href="">Uber Freight</a></li>
+                    </ul>
+                </div>
+                <div class="kuresel-footer">Küresel vatandaşlık
+                    <ul>
+                        <li><a href="">Güvenlik</a></li>
+                        <li><a href="">Çeşitlilik ve Kapsayıcılık</a></li>
+                    </ul>
+                </div>
+                <div class="yolculuk-footer">Yolculuk
+                    <ul>
+                        <li><a href="">Reserve</a></li>
+                        <li><a href="">Havalimanları</a></li>
+                        <li><a href="">Şehirler</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sosyal-footer">
+                <div class="sosyal-footer-div">
+                    <a href="">
+                        <i class="fa-brands fa-square-facebook"></i>
+                    </a>     
+                    <a href="">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>     
+                    <a href="">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>     
+                    <a href="">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>     
+                    <a href="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a> 
+                </div>  
+                <div class="dil-footer">
+                    <a href="">Türkçe</a>
+                </div>
+                <div class="konum-footer">
+                    <a href="">İstanbul</a>
+                </div>
+            </div>
+                <div class="app-footer">
+                    <a href="">
+                        <img class="app-footer2" src="vendor/img/uber/app-store-google-4d63c31a3e.svg" alt="">
+                    </a>
+                    <a href="">
+                        <img class="app-footer2" src="vendor/img/uber/app-store-apple-f1f919205b.svg" alt="">
+                    </a>
+                </div>
+                <div class="hukum-footer">
+                    <div class="trademark-hid">
+                        <div style="font-size: .7rem; color: #eeeeee53;" class="trademark-footer">© 2023 Uber Technologies Inc.</div>
+                    </div>
+                    <div class="gizlilik-hid">
+                        <div class="gizlilik-footer"><a href="">Gizlilik</a></div>
+                        <div class="erisilebilirlik-footer"><a href="">Erişilebilirlik</a></div>
+                        <div class="kosullar-footer"><a href="">Hükümler ve Koşullar</a></div>
+                    </div>  
+                </div>
+        </div>
+    </footer>
+
+    <!-- footer bitiş -->
+</body>
+
+</html>
