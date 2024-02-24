@@ -1,0 +1,337 @@
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+.topheader{
+    
+}
+.topheader ul{
+    display: flex;
+    justify-content: end;
+    margin: 0;
+}
+.topheader li {
+    list-style-type: none;
+    display: flex;
+    margin: 0px 10px;
+    
+}
+.topheader li a{
+    text-decoration: none;
+    color: #999;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.nav1{
+    display: flex !important;
+    align-items: center !important;
+    
+}
+
+
+.nav2 a{
+    font-size: 15.4px;
+}
+
+
+.hidden a{
+    text-decoration: none !important;
+}
+
+.index-drop-favori{
+    color: #333333 !important;
+    transition: all .6s !important;
+}
+
+.index-sepet{
+    color: #333333 !important;
+    transition: all .6s !important;
+}
+
+.index-account{
+    color: #333333 !important;
+    transition: all .6s !important;
+}
+
+.index-account:hover{
+    color: orangered !important;
+}
+
+.index-sepet:hover{
+    color: orangered !important;
+}
+
+.index-drop-favori:hover{
+    color: orangered !important;
+}
+
+.index-kategori a{
+    color: #333 !important;
+    transition: all .6s !important;
+}
+
+.index-kategori a:hover{
+    color: orangered !important;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .index-carousel-1{
+    margin-top: 30px;
+    height: 100%;
+    border: 1px solid #f2e5da;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.05) !important;
+    background-color: #fffaf6 !important;
+  }
+
+  .index-main-card1{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cizgi{
+    width: 1300px;
+    border: 1px solid rgba(0, 0, 0, 0.118);
+  }
+
+  .popular_brands_content li{
+    list-style-type: none;
+  }
+
+  .popular_brands_content li a{
+    text-decoration: none;
+    color: #333;
+  }
+
+  .footer-cont{
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hid-footer{
+    margin: 50px;
+  }
+
+  .hid-footer li{
+    list-style-type: none;
+    margin-top: 25px;
+  }
+
+  .hid-footer li a{
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .hidden-user-drop a{
+    text-decoration: none;
+    color: orangered;
+  }
+
+  .hidden_drop_yazi a:hover{ 
+    background-color: rgba(255, 166, 0, 0.234);
+  }
+
+  /* ürün.html */
+
+  .urun_anasayfa a{
+    text-decoration: none;
+    color: #333;
+    font-size: .9rem;
+  }
+
+  .urun_aciklama_top_ranking{
+    background-color: rgba(255, 166, 0, 0.139);
+    border-radius: 10px;
+  }
+
+  .urun_aciklama_top_ranking a{
+    text-decoration: none;
+    color: #333;
+    font-size: .8rem;
+  }
+
+  .urun_degerelendirme a{
+    text-decoration: none;
+    color: #333;
+    font-size: .8rem;
+  }
+
+  .urun_stok{
+    background-color: rgba(255, 0, 0, 0.121);
+    border-radius: 5px;
+  }
+
+  .urun_stok a{
+    text-decoration: none;
+    color: red;
+    font-size: .8rem;
+  }
+
+  .urun_fiyat{
+    color: rgb(187, 123, 4);
+    font-size: 1.2rem;
+  }
+
+  .urun_beden_kategori{
+    background-color: rgba(0,0,0,0);
+    border: 1px solid;
+  }
+
+  .urun_sepet_buton{
+    border: none;
+    background-color: orange;
+    border-radius: 10px;
+    color: #fff;
+    height: 40px !important;
+  }
+
+  .login_dis_cizgi{
+    border-radius: 5px;
+    color: #00000071;
+  }
+
+
+
+
+
+@media screen and (max-width:1024px) {
+    .coksatan{
+        display: none !important;
+    }
+
+    .flash{
+        display: none !important;
+    }
+
+    .nav2 a{
+        font-size: 10px;
+    }
+
+    .pumaa{
+        display: none !important;
+    }
+    .nikee{
+        display: none !important;
+    }
+    .defactoo{
+        display: none !important;
+    }
+
+    .header-yesil img{
+        width: 290px !important;
+    }
+
+    .header-pic1 img{
+        width: 296px !important;
+    }
+
+    .index-account{
+        padding: 0 !important;
+    }
+
+    .index-drop-favori{
+        padding: 0 !important;
+    }
+
+    .index-sepet{
+        padding: 0 !important;
+    }
+
+    .card{
+        width: 14rem !important;
+    }
+
+    .cizgi{
+        width: auto;
+    }
+
+}
+@media screen and (max-width:768px) {
+    .hidnav1{
+        display: none !important;
+    }
+    .hidnav2{
+        display: block !important;
+    }
+
+    .searchoff{
+        display: none !important;
+    }
+
+    .swiper-button-next {
+        right: 20px;
+        transform: rotate(90deg);
+      }
+
+      .swiper-button-prev {
+        left: 20px;
+        transform: rotate(90deg);
+      }
+
+      .card{
+        width: 12rem !important;
+    }
+
+    .header-yesil img{
+        width: 200px !important;
+    }
+
+    .header-pic1 img{
+        width: 200px !important;
+    }
+
+    .krediler{
+        display: none !important;
+    }
+
+    .caykur{
+        display: none !important;
+    }
+
+    .topheader{
+        display: none !important;
+    }
+
+    header{
+        margin-top: 100px;
+    }
+
+    .hid-footer{
+        margin: 0px !important;
+    }
+
+    .trendyol{
+        margin: 0px !important;
+    }
+    .about_us{
+        margin: 0px !important;
+    }
+    .kampanyalar{
+        margin: 0px !important;
+    }
+    .yardim{
+        margin: 0px !important;
+    }
+
+}

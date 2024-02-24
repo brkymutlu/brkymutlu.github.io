@@ -1,0 +1,1982 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="vendor/css/style.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <!-- en üst -->
+  <div class="topheader ms-5 me-5 pt-2">
+    <ul>
+      <li><a href="#">İndirim Kuponlarım</a></li>
+      <li><a href="#">Trendyol'da Satış Yap</a></li>
+      <li><a href="#">Hakkımızda</a></li>
+      <li><a href="#">Yardım & Destek</a></li>
+    </ul>
+  </div>
+
+  <!-- Main navbar -->
+
+  <nav class="hidnav1 navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid ms-5 me-5">
+      <a class="navbar-brand" href="#">
+        <img style="width: 130px;" src="https://cdn.dsmcdn.com/web/logo/ty-web.svg" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <form class="d-flex w-50" role="search">
+        <input class="form-control me-2" type="search" placeholder="Aradığınız ürün, kategori veya markayı yazınız"
+          aria-label="Search">
+        <!--  <button class="btn btn-outline-success" type="submit">Search</button> -->
+      </form>
+      <div class="collapse navbar nav1" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown me-4 " style="font-size: .8rem;">
+            <a class="nav-link dropdown-toggle index-drop-favori" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa-regular fa-user"></i>
+              Hesabım
+            </a>
+            <ul class="dropdown-menu">
+              <div class="hidden-user-drop container d-felx justify-content-center">
+                <a href="#">
+                  Berkay Mutlu
+                </a>
+              </div>
+              <div class="hidden_drop_yazi">
+                <li style="font-size: .7rem;"><a class="dropdown-item" href="#">
+                    <i class="fa-solid fa-box"></i>
+                    Tüm Siparişlerim
+                  </a></li>
+                <li style="font-size: .7rem;"><a class="dropdown-item" href="#">
+                    <i class="fa-solid fa-comments"></i>
+                    Değerlendirmelerim
+                  </a></li>
+                <li style="font-size: .7rem;"><a class="dropdown-item" href="#">
+                    <i class="fa-solid fa-envelope"></i>
+                    Satıcı Mesajlarım
+                  </a></li>
+                <li style="font-size: .7rem;"><a class="dropdown-item" href="#">
+                    <i class="fa-solid fa-gift"></i>
+                    Şanslı Çekiliş
+                  </a></li>
+                <li style="font-size: .7rem;"><a class="dropdown-item" href="#">
+                    <i class="fa-solid fa-tag"></i>
+                    İndirim Kuponları
+                  </a></li>
+                <li style="font-size: .7rem;"><a class="dropdown-item" href="#">
+                    <i class="fa-solid fa-user"></i>
+                    Kullanıcı Bilgileri
+                  </a></li>
+                <li style="font-size: .7rem;"><a class="dropdown-item" href="#">
+                    <i class="fa-solid fa-gem"></i>
+                    Şanslı Çekiliş
+                  </a></li>
+                <li style="font-size: .7rem;"><a class="dropdown-item" href="#">
+                    <i class="fa-solid fa-ear-listen"></i>
+                    Trendyol Asistan
+                  </a></li>
+                <li style="font-size: .7rem;"><a class="dropdown-item" href="#">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Çıkış Yap
+                  </a></li>
+              </div>
+            </ul>
+          </li>
+          <li class="nav-item d-flex align-items-center me-4 " style="font-size: .8rem;">
+            <a class="nav-link active index-account" aria-current="page" href="#">
+              <i class="fa-regular fa-heart"></i>
+              Favorilerim
+            </a>
+          </li>
+          <li class="nav-item me-4 d-flex align-items-center " style="font-size: .8rem;">
+            <a class="nav-link index-sepet" href="#">
+              <i class="fa-solid fa-cart-shopping"></i>
+              Sepetim
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- responsive navbar -->
+
+  <nav style="display: none;" class="hidnav2 navbar bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img style="width: 130px;" src="https://cdn.dsmcdn.com/web/logo/ty-web.svg" alt="">
+      </a>
+      <form class="d-flex w-50 " role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="searchoff d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- katalog -->
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <div class="nav2 collapse navbar-collapse w-100 justify-content-around" id="navbarNavDropdown">
+        <ul class="navbar-nav index-kategori">
+          <li class="nav-item">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle me-4" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Kadın
+            </a>
+            <ul class="dropdown-menu">
+              <div class="hidden_lists_drop_menu d-flex w-100 gap-5">
+                <li><a class="dropdown-item ms-2" href="#">Giyim</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kazak</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Elbise</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Tişört</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gömlek</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kot Pantolon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kot ceket</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pantolon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Mont</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bluz</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Ceket</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Etek</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Ayakkabı</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Topuklu Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sneaker</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Günlük Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Babet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sandalet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çizme</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kar Botu</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Loafer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Ayakkabı</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Topuklu Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sneaker</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Günlük Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Babet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sandalet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çizme</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kar Botu</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Loafer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Çanta</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Omuz Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sırt Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bel Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Okul Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Laptop Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Portföy</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Postacı Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">El Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kanvas Çanta</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Makyaj Çantası</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">İç Giyim</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pijama Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gecelik</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sütyen</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">İç Çamaşırı Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Fantezi Giyim</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çorap</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Korse</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Külot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Büstiyer</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bralet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Atlet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kombinezon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Jartiyer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item" href="#">Spor & Outdoor</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pijama Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gecelik</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sütyen</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">İç Çamaşırı Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Fantezi Giyim</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çorap</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Korse</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Külot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Büstiyer</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bralet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Atlet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kombinezon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Jartiyer</a>
+                  </div>
+                </li>
+              </div>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle me-4" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Erkek
+            </a>
+            <ul class="dropdown-menu">
+              <div class="hidden_lists_drop_menu d-flex w-100 gap-5">
+                <li><a class="dropdown-item ms-2" href="#">Giyim</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kazak</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Elbise</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Tişört</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gömlek</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kot Pantolon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kot ceket</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pantolon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Mont</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bluz</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Ceket</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Etek</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Ayakkabı</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Topuklu Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sneaker</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Günlük Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Babet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sandalet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çizme</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kar Botu</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Loafer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Ayakkabı</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Topuklu Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sneaker</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Günlük Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Babet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sandalet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çizme</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kar Botu</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Loafer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Çanta</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Omuz Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sırt Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bel Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Okul Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Laptop Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Portföy</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Postacı Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">El Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kanvas Çanta</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Makyaj Çantası</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">İç Giyim</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pijama Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gecelik</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sütyen</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">İç Çamaşırı Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Fantezi Giyim</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çorap</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Korse</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Külot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Büstiyer</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bralet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Atlet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kombinezon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Jartiyer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item" href="#">Spor & Outdoor</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pijama Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gecelik</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sütyen</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">İç Çamaşırı Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Fantezi Giyim</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çorap</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Korse</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Külot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Büstiyer</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bralet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Atlet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kombinezon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Jartiyer</a>
+                  </div>
+                </li>
+              </div>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle me-4" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Anne & Çocuk
+            </a>
+            <ul class="dropdown-menu">
+              <div class="hidden_lists_drop_menu d-flex w-100 gap-5">
+                <li><a class="dropdown-item ms-2" href="#">Giyim</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kazak</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Elbise</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Tişört</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gömlek</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kot Pantolon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kot ceket</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pantolon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Mont</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bluz</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Ceket</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Etek</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Ayakkabı</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Topuklu Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sneaker</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Günlük Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Babet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sandalet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çizme</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kar Botu</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Loafer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Ayakkabı</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Topuklu Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sneaker</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Günlük Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Babet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sandalet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çizme</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kar Botu</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Loafer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Çanta</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Omuz Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sırt Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bel Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Okul Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Laptop Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Portföy</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Postacı Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">El Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kanvas Çanta</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Makyaj Çantası</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">İç Giyim</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pijama Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gecelik</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sütyen</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">İç Çamaşırı Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Fantezi Giyim</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çorap</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Korse</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Külot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Büstiyer</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bralet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Atlet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kombinezon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Jartiyer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item" href="#">Spor & Outdoor</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pijama Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gecelik</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sütyen</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">İç Çamaşırı Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Fantezi Giyim</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çorap</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Korse</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Külot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Büstiyer</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bralet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Atlet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kombinezon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Jartiyer</a>
+                  </div>
+                </li>
+              </div>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle me-4" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Ev & Yaşam
+            </a>
+            <ul class="dropdown-menu">
+              <div class="hidden_lists_drop_menu d-flex w-100 gap-5">
+                <li><a class="dropdown-item ms-2" href="#">Giyim</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kazak</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Elbise</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Tişört</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gömlek</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kot Pantolon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kot ceket</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pantolon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Mont</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bluz</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Ceket</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Etek</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Ayakkabı</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Topuklu Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sneaker</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Günlük Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Babet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sandalet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çizme</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kar Botu</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Loafer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Ayakkabı</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Topuklu Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sneaker</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Günlük Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Babet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sandalet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çizme</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kar Botu</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Loafer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Çanta</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Omuz Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sırt Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bel Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Okul Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Laptop Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Portföy</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Postacı Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">El Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kanvas Çanta</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Makyaj Çantası</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">İç Giyim</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pijama Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gecelik</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sütyen</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">İç Çamaşırı Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Fantezi Giyim</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çorap</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Korse</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Külot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Büstiyer</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bralet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Atlet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kombinezon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Jartiyer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item" href="#">Spor & Outdoor</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pijama Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gecelik</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sütyen</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">İç Çamaşırı Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Fantezi Giyim</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çorap</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Korse</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Külot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Büstiyer</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bralet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Atlet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kombinezon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Jartiyer</a>
+                  </div>
+                </li>
+              </div>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle me-4" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Süpermarket
+            </a>
+            <ul class="dropdown-menu">
+              <div class="hidden_lists_drop_menu d-flex w-100 gap-5">
+                <li><a class="dropdown-item ms-2" href="#">Giyim</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kazak</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Elbise</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Tişört</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gömlek</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kot Pantolon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kot ceket</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pantolon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Mont</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bluz</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Ceket</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Etek</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Ayakkabı</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Topuklu Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sneaker</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Günlük Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Babet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sandalet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çizme</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kar Botu</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Loafer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Ayakkabı</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Topuklu Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sneaker</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Günlük Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Babet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sandalet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çizme</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kar Botu</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Loafer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Çanta</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Omuz Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sırt Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bel Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Okul Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Laptop Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Portföy</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Postacı Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">El Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kanvas Çanta</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Makyaj Çantası</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">İç Giyim</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pijama Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gecelik</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sütyen</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">İç Çamaşırı Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Fantezi Giyim</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çorap</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Korse</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Külot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Büstiyer</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bralet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Atlet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kombinezon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Jartiyer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item" href="#">Spor & Outdoor</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pijama Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gecelik</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sütyen</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">İç Çamaşırı Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Fantezi Giyim</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çorap</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Korse</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Külot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Büstiyer</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bralet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Atlet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kombinezon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Jartiyer</a>
+                  </div>
+                </li>
+              </div>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle me-4" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Kozmetik
+            </a>
+            <ul class="dropdown-menu">
+              <div class="hidden_lists_drop_menu d-flex w-100 gap-5">
+                <li><a class="dropdown-item ms-2" href="#">Giyim</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kazak</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Elbise</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Tişört</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gömlek</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kot Pantolon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kot ceket</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pantolon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Mont</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bluz</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Ceket</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Etek</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Ayakkabı</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Topuklu Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sneaker</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Günlük Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Babet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sandalet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çizme</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kar Botu</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Loafer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Ayakkabı</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Topuklu Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sneaker</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Günlük Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Babet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sandalet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çizme</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kar Botu</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Loafer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Çanta</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Omuz Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sırt Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bel Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Okul Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Laptop Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Portföy</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Postacı Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">El Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kanvas Çanta</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Makyaj Çantası</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">İç Giyim</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pijama Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gecelik</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sütyen</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">İç Çamaşırı Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Fantezi Giyim</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çorap</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Korse</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Külot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Büstiyer</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bralet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Atlet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kombinezon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Jartiyer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item" href="#">Spor & Outdoor</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pijama Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gecelik</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sütyen</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">İç Çamaşırı Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Fantezi Giyim</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çorap</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Korse</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Külot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Büstiyer</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bralet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Atlet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kombinezon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Jartiyer</a>
+                  </div>
+                </li>
+              </div>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle me-4" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Ayakkabı & Çanta
+            </a>
+            <ul class="dropdown-menu">
+              <div class="hidden_lists_drop_menu d-flex flex-column w-100 h-100 gap-5">
+                <li><a class="dropdown-item ms-2" href="#">Giyim</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kazak</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Elbise</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Tişört</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gömlek</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kot Pantolon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kot ceket</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pantolon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Mont</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bluz</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Ceket</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Etek</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Ayakkabı</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Topuklu Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sneaker</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Günlük Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Babet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sandalet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çizme</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kar Botu</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Loafer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Ayakkabı</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Topuklu Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sneaker</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Günlük Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Babet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sandalet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çizme</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kar Botu</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Loafer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Çanta</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Omuz Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sırt Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bel Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Okul Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Laptop Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Portföy</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Postacı Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">El Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kanvas Çanta</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Makyaj Çantası</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">İç Giyim</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pijama Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gecelik</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sütyen</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">İç Çamaşırı Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Fantezi Giyim</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çorap</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Korse</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Külot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Büstiyer</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bralet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Atlet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kombinezon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Jartiyer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item" href="#">Spor & Outdoor</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pijama Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gecelik</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sütyen</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">İç Çamaşırı Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Fantezi Giyim</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çorap</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Korse</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Külot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Büstiyer</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bralet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Atlet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kombinezon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Jartiyer</a>
+                  </div>
+                </li>
+              </div>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle me-4" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Elektronik
+            </a>
+            <ul class="dropdown-menu">
+              <div class="hidden_lists_drop_menu d-flex flex-column w-100 h-100 gap-5">
+                <li><a class="dropdown-item ms-2" href="#">Giyim</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kazak</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Elbise</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Tişört</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gömlek</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kot Pantolon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kot ceket</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pantolon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Mont</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bluz</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Ceket</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Etek</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Ayakkabı</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Topuklu Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sneaker</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Günlük Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Babet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sandalet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çizme</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kar Botu</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Loafer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Ayakkabı</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Topuklu Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sneaker</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Günlük Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Babet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sandalet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çizme</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kar Botu</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Loafer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Çanta</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Omuz Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sırt Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bel Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Okul Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Laptop Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Portföy</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Postacı Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">El Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kanvas Çanta</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Makyaj Çantası</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">İç Giyim</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pijama Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gecelik</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sütyen</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">İç Çamaşırı Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Fantezi Giyim</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çorap</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Korse</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Külot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Büstiyer</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bralet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Atlet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kombinezon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Jartiyer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item" href="#">Spor & Outdoor</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pijama Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gecelik</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sütyen</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">İç Çamaşırı Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Fantezi Giyim</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çorap</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Korse</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Külot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Büstiyer</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bralet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Atlet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kombinezon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Jartiyer</a>
+                  </div>
+                </li>
+              </div>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle me-4" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Spor & Outdoor
+            </a>
+            <ul class="dropdown-menu">
+              <div class="hidden_lists_drop_menu d-flex flex-column w-100 h-100 gap-5">
+                <li><a class="dropdown-item ms-2" href="#">Giyim</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kazak</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Elbise</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Tişört</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gömlek</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kot Pantolon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kot ceket</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pantolon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Mont</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bluz</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Ceket</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Etek</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Ayakkabı</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Topuklu Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sneaker</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Günlük Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Babet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sandalet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çizme</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kar Botu</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Loafer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Ayakkabı</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline me-4 ms-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Topuklu Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sneaker</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Günlük Ayakkabı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Babet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sandalet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çizme</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kar Botu</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Loafer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">Çanta</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Omuz Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sırt Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bel Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Okul Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Laptop Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Portföy</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Postacı Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">El Çantası</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kanvas Çanta</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Makyaj Çantası</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item ms-2" href="#">İç Giyim</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pijama Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gecelik</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sütyen</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">İç Çamaşırı Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Fantezi Giyim</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çorap</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Korse</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Külot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Büstiyer</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bralet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Atlet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kombinezon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Jartiyer</a>
+                  </div>
+                </li>
+                <li><a class="dropdown-item" href="#">Spor & Outdoor</a>
+                  <div class="hid_action d-flex flex-column align-items-baseline ms-4 me-4 w-100">
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Pijama Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Gecelik</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Sütyen</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">İç Çamaşırı Takımı</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Fantezi Giyim</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Çorap</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Korse</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Külot</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Büstiyer</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Bralet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Atlet</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Kombinezon</a>
+                    <a style="font-size: .7rem; text-decoration: none;" href="#">Jartiyer</a>
+                  </div>
+                </li>
+              </div>
+            </ul>
+          </li>
+          <a class="nav-link coksatan me-4" href="#">Çok Satanlar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link flash" href="#">Flaş Ürünler</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <hr>
+
+  <header>
+    <!-- slider1 -->
+    <div class="hidden mt-2 d-flex">
+      <div class="index-hidden-1 d-flex" style="flex-direction: column; width: min-content;">
+        <a href="#">
+          <img style="height: 70px; display: flex ;" class="ms-5 me-4"
+            src="vendor/img/Senin_Icin_Sectik_202302142041.webp" alt="">
+        </a>
+        <div style="display: flex; justify-content: center; font-size: .7rem;" class="ms-3">Sen De al!</div>
+      </div>
+      <div class="index-hidden-1 d-flex" style="flex-direction: column; width: min-content;">
+        <a href="#">
+          <img style="height: 70px; display: flex ;" class="ms-5 me-4"
+            src="vendor/img/En_Cok_Satanlar_202302142041.webp" alt="">
+        </a>
+        <div style="display: flex; justify-content: center; font-size: .7rem;" class="ms-3">Sana Özel</div>
+      </div>
+      <div class="index-hidden-1 d-flex" style="flex-direction: column; width: min-content;">
+        <a href="#">
+          <img style="height: 70px; display: flex ;" class="ms-5 me-4"
+            src="vendor/img/Gazze_Web_Circlebanner_202310271210.webp" alt="">
+        </a>
+        <div style="display: flex; justify-content: center; font-size: .7rem;" class="ms-3">Dijital <br>Destek <br>
+          Kartları</div>
+      </div>
+      <div class="index-hidden-1 d-flex" style="flex-direction: column; width: min-content;">
+        <a href="#">
+          <img style="height: 70px; display: flex ;" class="ms-5 me-4" src="vendor/img/kredi kart.webp" alt="">
+        </a>
+        <div style="display: flex; justify-content: center; font-size: .7rem;" class="ms-3">Kredi Kartı</div>
+      </div>
+      <div class="index-hidden-1 d-flex" style="flex-direction: column; width: min-content;">
+        <a href="#">
+          <img style="height: 70px; display: flex ;" class="ms-5 me-4" src="vendor/img/çamaşır.webp" alt="">
+        </a>
+        <div style="display: flex; justify-content: center; font-size: .7rem;" class="ms-3">Kurumsal</div>
+      </div>
+      <div class="index-hidden-1 d-flex krediler" style="flex-direction: column; width: min-content;">
+        <a href="#">
+          <img style="height: 70px; display: flex ;" class="ms-5 me-4" src="vendor/img/para.webp" alt="">
+        </a>
+        <div style="display: flex; justify-content: center; font-size: .7rem;" class="ms-3">Krediler</div>
+      </div>
+      <div class="index-hidden-1 d-flex caykur" style="flex-direction: column; width: min-content;">
+        <a href="#">
+          <img style="height: 70px; display: flex ;" class="ms-5 me-4" src="vendor/img/CAykur_202301262231.webp" alt="">
+        </a>
+        <div style="display: flex; justify-content: center; font-size: .7rem;" class="ms-4">çaykur</div>
+      </div>
+      <div class="index-hidden-1 d-flex pumaa" style="flex-direction: column; width: min-content;">
+        <a href="#">
+          <img style="height: 70px; display: flex ;" class="ms-5 me-4 " src="vendor/img/Puma_202301271558.webp" alt="">
+        </a>
+        <div style="display: flex; justify-content: center; font-size: .7rem;" class="ms-4 ">Puma</div>
+      </div>
+      <div class="index-hidden-1 d-flex nikee" style="flex-direction: column; width: min-content;">
+        <a href="#">
+          <img style="height: 70px; display: flex ;" class="ms-5 me-4 " src="vendor/img/Nike_202301271540.webp" alt="">
+        </a>
+        <div style="display: flex; justify-content: center; font-size: .7rem;" class="ms-4">Nike</div>
+      </div>
+      <div class="index-hidden-1 d-flex defactoo" style="flex-direction: column; width: min-content;">
+        <a href="#">
+          <img style="height: 70px; display: flex ;" class="ms-5 me-4 " src="vendor/img/Defacto_202301270049.webp"
+            alt="">
+        </a>
+        <div style="display: flex; justify-content: center; font-size: .7rem;" class="ms-4">DeFacto</div>
+      </div>
+    </div>
+
+    <!-- resimler -->
+    <div class="container text-center mt-5 header-renkli">
+      <div class="row">
+        <div class="col header-yesil">
+          <a href="#">
+            <img style="width: 410px;" src="vendor/img/en çok eklenenler.webp" alt="">
+          </a>
+        </div>
+        <div class="col header-yesil">
+          <a href="#">
+            <img style="width: 410px;" src="vendor/img/Onecikan_202304181225.webp" alt="">
+          </a>
+        </div>
+        <div class="col header-yesil">
+          <a href="#">
+            <img style="width: 410px;" src="vendor/img/Flash_202304181225.webp" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center mt-5">
+      <div class="row">
+        <div class="col header-pic1">
+          <a href="#">
+            <img style="width: 410px; border-radius: 10px;"
+              src="https://cdn.dsmcdn.com/ty1146/pimWidgetApi/mobile_20240124172544_1orgzoomjpgkcuk.jpg" alt="">
+          </a>
+        </div>
+        <div class="col header-pic1">
+          <a href="#">
+            <img style="width: 410px; border-radius: 10px;"
+              src="https://cdn.dsmcdn.com/ty1145/pimWidgetApi/mobile_20240122120442_indir1.jpg" alt="">
+          </a>
+        </div>
+        <div class="col header-pic1">
+          <a href="#">
+            <img style="width: 410px; border-radius: 10px;"
+              src="	https://cdn.dsmcdn.com/ty1112/pimWidgetApi/mobile_20231229120956_2394084ErkekMobile20231228100.jpg"
+              alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center mt-3">
+      <div class="row">
+        <div class="col header-pic1">
+          <a href="#">
+            <img style="width: 410px; border-radius: 10px;"
+              src="https://cdn.dsmcdn.com/ty1112/pimWidgetApi/mobile_20231229063906_2333761KadinMobile202312281001.jpg"
+              alt="">
+          </a>
+        </div>
+        <div class="col header-pic1">
+          <a href="#">
+            <img style="width: 410px; border-radius: 10px;"
+              src="https://cdn.dsmcdn.com/ty1110/pimWidgetApi/mobile_20231229120531_1234ErkekMobile202312281002.jpg"
+              alt="">
+          </a>
+        </div>
+        <div class="col header-pic1">
+          <a href="#">
+            <img style="width: 410px; border-radius: 10px;"
+              src="https://cdn.dsmcdn.com/ty1112/pimWidgetApi/mobile_20231228080907_PostalBotModasi.jpg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center mt-3">
+      <div class="row">
+        <div class="col header-pic1">
+          <a href="#">
+            <img style="width: 410px; border-radius: 10px;"
+              src="https://cdn.dsmcdn.com/ty1117/pimWidgetApi/mobile_20240103064430_grimelangekis.jpg" alt="">
+          </a>
+        </div>
+        <div class="col header-pic1">
+          <a href="#">
+            <img style="width: 410px; border-radius: 10px;"
+              src="	https://cdn.dsmcdn.com/ty1118/pimWidgetApi/mobile_20240102111002_2402134ErkekMobile20240102130.jpg"
+              alt="">
+          </a>
+        </div>
+        <div class="col header-pic1">
+          <a href="#">
+            <img style="width: 410px; border-radius: 10px;"
+              src="https://cdn.dsmcdn.com/ty1118/pimWidgetApi/mobile_20240102055228_ac2024banner.jpg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- slider 2 -->
+    <div class="container d-flex justify-content-center">
+      <div class="index-carousel-1 w-100">
+        <div class="index-main-card1">
+          <div class="index-carousel-yazi-1 d-flex ">Çok Satan Ürünler</div>
+          <div class="index-carousel-yazi-2">Tüm Ürünler!</div>
+        </div>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide me-5 ms-5">
+              <div class="card" style="width: 18rem;">
+                <div class="img-hid d-flex justify-content-center mt-4" style="position: relative;">
+                  <img src="vendor/img/1_org.webp" class="card-img-top w-50" alt="...">
+                  <img class="w-25 h-25" src="vendor/img/EnCokSatan_202012091129.webp" alt=""
+                    style="position: absolute; left: 30px; top: -10px;">
+                </div>
+                <div class="card-body">
+                  <p style="font-weight: bold; font-size: 14px;color: #333">
+                    monalisatoka
+                    <span style="font-size: 12px; color: #666;">Kadın Çelik Zirkon Taş Gold Küpe</span>
+                  </p>
+                </div>
+                <div class="card-lower d-flex justify-content-baseline ms-3">
+                  <p style="color: #f27a1a; font-weight: 600;">89,98 TL</p>
+                </div>
+                <div class="card-end d-flex justify-content-baseline ms-3">
+                  <i style="color: #f27a1a" class="fa-solid fa-tag"></i>
+                  <p style="color: #333333; font-size: 11px; font-weight: 600;">4 Al 3 Öde</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide me-5 ms-5">
+              <div class="card" style="width: 18rem;">
+                <div class="img-hid d-flex justify-content-center mt-4" style="position: relative;">
+                  <img src="vendor/img/1_org (1).webp" class="card-img-top w-50" alt="...">
+                  <img class="w-25 h-25" src="vendor/img/3saatte1.webp" alt=""
+                    style="position: absolute; left: 30px; top: 50px;">
+                  <img class="w-25 h-25" src="vendor/img/seçili bankalarda .webp" alt=""
+                    style="position: absolute; left: 30px; top: 120px;">
+                </div>
+                <div class="card-body">
+                  <p style="font-weight: bold; font-size: 14px;color: #333">
+                    NFTY
+                    <span style="font-size: 12px; color: #666;">Kadın Siyah Yüksek Bel Toparlayıcı Palazzo
+                      Pantolon</span>
+                  </p>
+                </div>
+                <div class="card-lower d-flex justify-content-baseline ms-3">
+                  <p style="color: #f27a1a; font-weight: 600;">192,22 TL</p>
+                </div>
+                <div class="card-end d-flex justify-content-baseline ms-3">
+                  <div
+                    style="background-color: rgba(218, 9, 204, 0.086); height: 20px !important; border-radius: 4px; width: auto;"
+                    class="coupon d-flex">
+                    <i style="color: rgb(218, 9, 204);" class="fa-solid fa-ticket"></i>
+                    <p style="color: #333333; font-size: 11px; font-weight: 600;">Kupon Fırsatı</p>
+                  </div>
+                  <div class="tag d-flex ms-3">
+                    <i style="color: #f27a1a" class="fa-solid fa-tag"></i>
+                    <p style="color: #333333; font-size: 11px; font-weight: 600;">Çok Al Az Öde</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide me-5 ms-5 ">
+              <div class="card" style="width: 18rem;">
+                <div class="img-hid d-flex justify-content-center mt-4" style="position: relative;">
+                  <img src="vendor/img/1_org (2).webp" class="card-img-top w-50" alt="...">
+                  <img class="w-25 h-25" src="vendor/img/EnCokSatan_202012091129.webp" alt=""
+                    style="position: absolute; left: 30px; top: -10px;">
+                </div>
+                <div class="card-body">
+                  <p style="font-weight: bold; font-size: 14px;color: #333">
+                    Ritnice
+                    <span style="font-size: 12px; color: #666;">Line Kadın Likralı Cırt Kapama Siyah Palazzo
+                      Pantolon</span>
+                  </p>
+                </div>
+                <div class="card-lower d-flex justify-content-baseline ms-3">
+                  <p style="color: #f27a1a; font-weight: 600;">374 TL</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide me-5 ms-5 ">
+              <div class="card" style="width: 18rem;">
+                <div class="img-hid d-flex justify-content-center mt-4" style="position: relative;">
+                  <img src="vendor/img/1_org (3).webp" class="card-img-top w-50" alt="...">
+                  <img class="w-25 h-25" src="vendor/img/EnCokSatan_202012091129.webp" alt=""
+                    style="position: absolute; left: 30px; top: -10px;">
+                </div>
+                <div class="card-body">
+                  <p style="font-weight: bold; font-size: 14px;color: #333">
+                    FV
+                    <span style="font-size: 12px; color: #666;">Palazzo Pantolon Oversize Orjinal Kesim</span>
+                  </p>
+                </div>
+                <div class="card-lower d-flex justify-content-baseline ms-3">
+                  <p style="color: #f27a1a; font-weight: 600;">249,99 TL</p>
+                </div>
+                <div class="card-end d-flex justify-content-baseline ms-3">
+                  <i style="color: #f27a1a" class="fa-solid fa-tag"></i>
+                  <p style="color: #333333; font-size: 11px; font-weight: 600;">Çok Al Az Öde</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide me-5 ms-5 ">
+              <div class="card" style="width: 18rem;">
+                <div class="img-hid d-flex justify-content-center mt-4" style="position: relative;">
+                  <img src="vendor/img/1_org (4).webp" class="card-img-top w-50" alt="...">
+                  <img class="w-25 h-25" src="vendor/img/EnCokSatan_202012091129.webp" alt=""
+                    style="position: absolute; left: 30px; top: -10px;">
+                </div>
+                <div class="card-body">
+                  <p style="font-weight: bold; font-size: 14px;color: #333">
+                    Strawberry
+                    <span style="font-size: 12px; color: #666;">DÜĞMELİ PİJAMA TAKIM</span>
+                  </p>
+                </div>
+                <div class="card-lower d-flex justify-content-baseline ms-3">
+                  <p style="color: #f27a1a; font-weight: 600;">249,99 TL</p>
+                </div>
+                <div class="card-end d-flex justify-content-baseline ms-3">
+                  <i style="color: rgb(218, 9, 204);" class="fa-solid fa-ticket"></i>
+                  <p style="color: #333333; font-size: 11px; font-weight: 600;">Kupon Fırsatı</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide me-5 ms-5 ">
+              <div class="card" style="width: 18rem;">
+                <div class="img-hid d-flex justify-content-center mt-4" style="position: relative;">
+                  <img src="vendor/img/1_org (5).webp" class="card-img-top w-50" alt="...">
+                  <img class="w-25 h-25" src="vendor/img/EnCokSatan_202012091129.webp" alt=""
+                    style="position: absolute; left: 30px; top: -10px;">
+                </div>
+                <div class="card-body">
+                  <p style="font-weight: bold; font-size: 14px;color: #333">
+                    Bioxcin
+                    <span style="font-size: 12px; color: #666;">Forte Yoğun Saç Dökülmesine Karşı Bakım Şampuanı 300 Ml
+                      - 3 Al 2 Öde</span>
+                  </p>
+                </div>
+                <div class="card-lower d-flex justify-content-baseline ms-3">
+                  <p style="color: #f27a1a; font-weight: 600;">266,90 TL</p>
+                </div>
+                <div class="card-end d-flex justify-content-baseline ms-3">
+                  <i style="color: #f27a1a" class="fa-solid fa-tag"></i>
+                  <p style="color: #333333; font-size: 11px; font-weight: 600;">Çok Al Az Öde</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide ms-5 me-5">
+              <div class="card" style="width: 18rem;">
+                <img src="" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide ms-5 me-5">
+              <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide ms-5 me-5">
+              <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container d-flex justify-content-center">
+      <div class="index-carousel-1 w-100">
+        <div class="index-main-card1">
+          <div class="index-carousel-yazi-1 d-flex ">Çok Satan Ürünler</div>
+          <div class="index-carousel-yazi-2">Tüm Ürünler!</div>
+        </div>
+
+        <!-- slider 3 -->
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide me-5 ms-5">
+              <div class="card" style="width: 18rem;">
+                <div class="img-hid d-flex justify-content-center mt-4" style="position: relative;">
+                  <img src="vendor/img/1_org (6).webp" class="card-img-top w-50" alt="...">
+                  <img class="w-25 h-25" src="vendor/img/EnCokSatan_202012091129.webp" alt=""
+                    style="position: absolute; left: 30px; top: -10px;">
+                </div>
+                <div class="card-body">
+                  <p style="font-weight: bold; font-size: 14px;color: #333">
+                    HC Care
+                    <span style="font-size: 12px; color: #666;">Complex Bitkisel Saç Bakım Kompleksi - 100 ml</span>
+                  </p>
+                  <div class="card-down-price">
+                    <p style="color: #BB0000; font-size: 14px;">Son 30 Günün En Düşük Fiyatı</p>
+                  </div>
+                </div>
+                <div class="card-lower d-flex justify-content-baseline ms-3">
+                  <p style="color: #878787; text-decoration: line-through; font-size: 16px;">349 TL</p>
+                  <p class="ms-2" style="color: #BB0000; font-size: 16px;">296,65 TL</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide me-5 ms-5">
+              <div class="card" style="width: 18rem;">
+                <div class="img-hid d-flex justify-content-center mt-4" style="position: relative;">
+                  <img src="vendor/img/1_org (7).webp" class="card-img-top w-50" alt="...">
+                  <img class="w-25 h-25" src="vendor/img/EnCokSatan_202012091129.webp" alt=""
+                    style="position: absolute; left: 30px; top: -20px;">
+                </div>
+                <div class="card-body">
+                  <p style="font-weight: bold; font-size: 14px;color: #333">
+                    DR TAYYARÖZ
+                  <div class="card-down-price">
+                    <p style="color: #BB0000; font-size: 14px;">Son 30 Günün En Düşük Fiyatı</p>
+                  </div>
+                </div>
+                <div class="card-lower d-flex justify-content-baseline ms-3">
+                  <p style="color: #878787; text-decoration: line-through; font-size: 16px;">99 TL</p>
+                  <p class="ms-2" style="color: #BB0000; font-size: 16px;">97 TL</p>
+                </div>
+                <div class="card-end d-flex justify-content-baseline ms-3">
+                  <div
+                    style="background-color: rgba(218, 9, 204, 0.086); height: 20px !important; border-radius: 4px; width: auto;"
+                    class="coupon d-flex">
+                    <i style="color: rgb(218, 9, 204);" class="fa-solid fa-ticket"></i>
+                    <p style="color: #333333; font-size: 11px; font-weight: 600;">Kupon Fırsatı</p>
+                  </div>
+                  <div class="tag d-flex ms-3">
+                    <i style="color: #f27a1a" class="fa-solid fa-tag"></i>
+                    <p style="color: #333333; font-size: 11px; font-weight: 600;">Çok Al Az Öde</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide me-5 ms-5 ">
+              <div class="card" style="width: 18rem;">
+                <div class="img-hid d-flex justify-content-center mt-4" style="position: relative;">
+                  <img src="vendor/img/1_org (8).webp" class="card-img-top w-50" alt="...">
+                  <img class="w-25 h-25" src="vendor/img/EnCokSatan_202012091129.webp" alt=""
+                    style="position: absolute; left: 30px; top: -10px;">
+                </div>
+                <div class="card-body">
+                  <p style="font-weight: bold; font-size: 14px;color: #333">
+                    rise and shine
+                    <span style="font-size: 12px; color: #666;">Antiperspirant Whitening Roll-on - 75 ml</span>
+                  </p>
+                </div>
+                <div class="card-lower d-flex justify-content-baseline ms-3">
+                  <p style="color: #f27a1a; font-weight: 600;">111,81 TL</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide me-5 ms-5 ">
+              <div class="card" style="width: 18rem;">
+                <div class="img-hid d-flex justify-content-center mt-4" style="position: relative;">
+                  <img src="vendor/img/1_org (9).webp" class="card-img-top w-50" alt="...">
+                  <img class="w-25 h-25" src="vendor/img/EnCokSatan_202012091129.webp" alt=""
+                    style="position: absolute; left: 30px; top: -10px;">
+                </div>
+                <div class="card-body">
+                  <p style="font-weight: bold; font-size: 14px;color: #333">
+                    Zühre Ana
+                    <span style="font-size: 12px; color: #666;">Karadut Özü 670 Gr</span>
+                  </p>
+                </div>
+                <div class="card-lower d-flex justify-content-baseline ms-3">
+                  <p style="color: #f27a1a; font-weight: 600;">209,90 TL</p>
+                </div>
+                <div class="card-end d-flex justify-content-baseline ms-3">
+                  <i style="color: #f27a1a" class="fa-solid fa-tag"></i>
+                  <p style="color: #333333; font-size: 11px; font-weight: 600;">Çok Al Az Öde</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide me-5 ms-5 ">
+              <div class="card" style="width: 18rem;">
+                <div class="img-hid d-flex justify-content-center mt-4" style="position: relative;">
+                  <img src="vendor/img/1_org (10).webp" class="card-img-top w-50" alt="...">
+                  <img class="w-25 h-25" src="vendor/img/EnCokSatan_202012091129.webp" alt=""
+                    style="position: absolute; left: 30px; top: -10px;">
+                </div>
+                <div class="card-body">
+                  <p style="font-weight: bold; font-size: 14px;color: #333">
+                    WIWIFY
+                    <span style="font-size: 12px; color: #666;">Su Bazlı Yoğun Nemlendirici Yüz Kremi 100 ml Tüm Cilt
+                      Tipleri 24 Saat Etkili</span>
+                  </p>
+                </div>
+                <div class="card-lower d-flex justify-content-baseline ms-3">
+                  <p style="color: #f27a1a; font-weight: 600;">299 TL</p>
+                </div>
+                <div class="card-end d-flex justify-content-baseline ms-3">
+                  <i style="color: rgb(218, 9, 204);" class="fa-solid fa-ticket"></i>
+                  <p style="color: #333333; font-size: 11px; font-weight: 600;">3 Al 2 Öde</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide me-5 ms-5 ">
+              <div class="card" style="width: 18rem;">
+                <div class="img-hid d-flex justify-content-center mt-4" style="position: relative;">
+                  <img src="vendor/img/1_org (11).webp" class="card-img-top w-50" alt="...">
+                  <img class="w-25 h-25" src="vendor/img/EnCokSatan_202012091129.webp" alt=""
+                    style="position: absolute; left: 30px; top: -10px;">
+                </div>
+                <div class="card-body">
+                  <p style="font-weight: bold; font-size: 14px;color: #333">
+                    Narcissa
+                    <span style="font-size: 12px; color: #666;">Aserola Ekstresi içeren Karışık Bitki Tozu</span>
+                  </p>
+                </div>
+                <div class="card-lower d-flex justify-content-baseline ms-3">
+                  <p style="color: #f27a1a; font-weight: 600;">349 TL</p>
+                </div>
+                <div class="card-end d-flex justify-content-baseline ms-3">
+                  <i style="color: #f27a1a" class="fa-solid fa-tag"></i>
+                  <p style="color: #333333; font-size: 11px; font-weight: 600;">3 Al 2 Öde</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide ms-5 me-5">
+              <div class="card" style="width: 18rem;">
+                <img src="" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide ms-5 me-5">
+              <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide ms-5 me-5">
+              <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- resimler 2 -->
+
+    <div class="container text-center mt-5">
+      <div class="row">
+        <div class="col header-pic1">
+          <a href="#">
+            <img style="width: 410px; border-radius: 10px;" src="vendor/img/FalezMobilGif_202401292110.webp" alt="">
+          </a>
+        </div>
+        <div class="col header-pic1">
+          <a href="#">
+            <img style="width: 410px; border-radius: 10px;"
+              src="https://cdn.dsmcdn.com/ty1139/pimWidgetApi/mobile_20240118065127_2357442KadinMobile202401171802.jpg"
+              alt="">
+          </a>
+        </div>
+        <div class="col header-pic1">
+          <a href="#">
+            <img style="width: 410px; border-radius: 10px;"
+              src="https://cdn.dsmcdn.com/ty1154/pimWidgetApi/mobile_20240130064951_mobile20230828080833mobile2023.jpeg"
+              alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center mt-3">
+      <div class="row">
+        <div class="col header-pic1">
+          <a href="#">
+            <img style="width: 410px; border-radius: 10px;" src="vendor/img/frato.webp" alt="">
+          </a>
+        </div>
+        <div class="col header-pic1">
+          <a href="#">
+            <img style="width: 410px; border-radius: 10px;"
+              src="https://cdn.dsmcdn.com/ty1118/pimWidgetApi/mobile_20240102064906_2401145KadinMobile202312291205.jpg"
+              alt="">
+          </a>
+        </div>
+        <div class="col header-pic1">
+          <a href="#">
+            <img style="width: 410px; border-radius: 10px;"
+              src="https://cdn.dsmcdn.com/ty1093/pimWidgetApi/mobile_20231218065430_1234KadinMobile202312171401.jpg"
+              alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center mt-3">
+      <div class="row">
+        <div class="col header-pic1">
+          <a href="#">
+            <img style="width: 410px; border-radius: 10px;" src="vendor/img/alalook.webp" alt="">
+          </a>
+        </div>
+        <div class="col header-pic1">
+          <a href="#">
+            <img style="width: 410px; border-radius: 10px;"
+              src="https://cdn.dsmcdn.com/ty1143/pimWidgetApi/mobile_20240124071226_2401147KadinMobile202401231802.jpg"
+              alt="">
+          </a>
+        </div>
+        <div class="col header-pic1">
+          <a href="#">
+            <img style="width: 410px; border-radius: 10px;"
+              src="https://cdn.dsmcdn.com/ty1117/pimWidgetApi/mobile_20240103114931_634368EvYasamMobile202401031440.jpg"
+              alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="cizgi"></div>
+    </div>
+
+    <div class="container mt-3">
+      <h2>Tüm İhtiyaçlarınız İçin Tek İhtiyacınız Trendyol!</h2>
+      <p>Türkiye’nin önemli online alışveriş adreslerinden biri olan Trendyol, 2010 yılında modayı herkes için
+        ulaşılabilir kılmak amacıyla kuruldu. O günden bugüne giyimden aksesuara, ayakkabıdan kozmetiğe kadar pek çok
+        ürünle beğeni kazanmaya devam ediyor. Trendyol hem farklı zevklere hem de bütçelere hitap eder. Kolay ve güvenli
+        bir deneyim sunar. Üst ve alt giyim kategorilerinde sayısız model üretir ve sunar. Bu koleksiyonlar uygun fiyat
+        avantajıyla sunulur. Her mevsime uygun ürün seçenekleri bulunur. Kışlık seçimlerde kazak, mont, hırka, ceket
+        gibi ürünler baskınken yaz kombinlerinde renkli ve sade tişört modelleri sıklıkla kullanılır. İnce kumaştan
+        üretilen jeanlar ve kapriler de yine yaz ayları için ideal bir seçimler olarak değerlendirilir. Yaz tatili için
+        de bikini takımlarından satın alabilirsiniz. Geniş beden aralığı sayesinde istediğiniz ürünü tercih
+        edebilirsiniz.</p>
+      <h2>Modern Tasarımlarıyla Dikkat Çeken Trendyol Markaları</h2>
+      <p>Kıyafet kombinleri seçilen ayakkabıyla tamamlanır. Günlük ayakkabı, spor ayakkabı, topuklu ayakkabı, sandalet,
+        bot ve çizme olmak üzere geniş bir ürün skalası hazırlanır. Kıyafet tasarımları ise hedef kitlenin
+        beklentilerine göre şekillendirilir. Elbiseden gömleğe, tunikten eşofman takımına kadar pek çok kategoride
+        üretim yapılır. Sade, modern, kaliteli ve şık tasarımlar ilgiyle takip edilir. Sezonun trend renkleri ve
+        modelleri hazırlanan kreasyonlarda hissedilir. Üretici markalar çocuklar için farklı tasarımlara imza atarlar.
+        Birbirinden rahat, renkli ve eğlenceli modeller hazırlanır. Kız ve erkek çocukları için farklı kategoriler
+        bulunur. Mevcut çeşitlilik beklentilerin karşılanması noktasında önemlidir. Giyim markaları arasından kendiniz
+        veya çocuğunuz için ideal ürünleri seçebilirsiniz.</p>
+      <h2>Trendyol Özel Gün İndirimleriyle Kaçırılmayacak Fırsatlar</h2>
+      <p>Toplumdaki sosyal bilincin oluşmasına katkı sağlayan Trendyol, Sepette İyilik uygulamasıyla farklı
+        kategorilerde faaliyet gösteren sivil toplum kuruluşlarına ait ürünlerin satışını yapar. Böylece yardım zinciri
+        oluşturulur. Yapılan tüm alışverişlerde avantaj elde etmek için ise devreye Trendyol Elite fırsatı girer. Özel
+        hizmet ve ayrıcalıklar ilgi çekici bulunur. Bu ayrıcalıkları kullanarak mutfak alışverişinizi Trendyol Hızlı
+        Market ile yapabilirsiniz. Temel gıdadan atıştırmalıklara, sebzeden meyveye pek çok kategoride istediğiniz
+        ürünleri hızlı market ile bulabilirsiniz. Evden çıkmadan yapacağınız mutfak alışverişi yanında Trendyol Yemek
+        ile de akşam yemeklerinizi pratik şekilde halledebilirsiniz. Yoğun iş temposunda yapamadığınız akşam yemeklerini
+        bu uygulama sayesinde dert etmenize gerek kalmaz. Trendyol Efsane Günler sayesinde indirim fırsatlarını
+        değerlendirmek mümkündür. Aynı şekilde Black Friday zamanı da sıklıkla değerlendirilir. Trendyol'un
+        müşterilerine sunduğu tüm kampanyalara Trendyol İndirim Günleri sayfasından erişebilirsiniz. Alışverişiniz
+        sonrası ürünün elinize ulaşmasını günlerce beklemek istemiyorsanız alışverişiniz sırasında Trendyol teslimat
+        noktası ile "Gel-Al" seçeneğini kullanabilirsiniz.</p>
+      <h2>Modaya Uygun Trend Parçalar</h2>
+      <p>Ev yaşam ürünlerinde, giyimde, kozmetikte, elektronikte, oyuncu ekipmanlarında, pratik mutfak eşyalarında,
+        bebek & çocuk ürünlerinde ve süpermarket kategorilerinde yapacağınız alışverişlerde uygun fiyat avantajından
+        yararlanabilirsiniz. Mega Eylül ile sezonun moda kıyafetlerini ve evinizin ihtiyaçlarını tamamlayabilirsiniz.
+        Yaz tatilinin bitmesiyle başlayan okul telaşı okula dönüş kampanyası ile sorun olmaktan çıkar. Okul öncesi,
+        ilkokul, ortaokul, lise, üniversite olarak kategorilere ayrılan kırtasiye ürünleri ihtiyaçların karşılanması
+        için listelenir. Büyük Bahar Kampanyası ile yaza hazırlık yapabilirsiniz. Kış hazırlıklarınızı da Büyük Ekim
+        Kampanyası ile tamamlayabilirsiniz. Yapılan indirimlerde yer alan ürün çeşitliliği oldukça fazladır. Gram altın
+        seçeneklerine dahi ulaşmak mümkündür. Hediye veya yatırım amaçlı üretilen çeşitler mevcuttur. Çeyrek altın sık
+        tercih edilen altın ürünlerinin başında gelir.</p>
+      <h2>Elektronik Eşyalarda Uygun Fiyatlar</h2>
+      <p>Ayakkabı & Çanta ürünleri ile günlük kombinlere şıklık katmak mümkündür. Sneaker, casual, topuklu ayakkabı,
+        bot, çizme, kol ve sırt çantası modelleri başta olmak üzere geniş bir tasarım yelpazesi oluşturulur. Spor &
+        Outdoor kategorisinde yer alan parçalar da aynı şekilde sahip oldukları çeşitlilikle dikkat çekerler. Giyim
+        eşyaları ve ekipmanlar farklı başlıklar altında gruplandırılır. Yapılan gruplandırmada hedef kitlenin
+        özellikleri belirleyici kriter olarak kabul edilir. İlgili kategoride farklı markaların ürünlerinin olması
+        öncelikle seçim kolaylığı sağlar. Sonraki aşamada ise farklı bütçelere hitap edilmesini destekler. Karar
+        aşamasında kişinin üründen ne beklediğini belirlemesi gerekir. Ayrıca kaliteli markaların tercih edilmesi,
+        kullanım konforu açısından önemlidir. Üretim aşamasında seçilen malzemelerin, tasarım çizgilerinin ve işçiliğin
+        göz önüne alınması tavsiye edilir. Nitelikli ürün seçimi sayesinde kullanım konforu yükselir. Hem kendiniz hem
+        de sevdikleriniz için tercihinizi rahat, şık ve kaliteli modellerden yana kullanabilirsiniz.</p>
+      <h2>Tüm Dünyanın İhtiyaçları Trendyol’da!</h2>
+      <p>Ev & Mobilya kategorisinde yer alan ev tekstili, sofra & mutfak, aydınlatma, banyo, ev dekorasyon, mobilya, ev
+        gereçleri, hobi, kırtasiye & ofis, oto & motosiklet ürünlerini indirim günlerinde yapılan kampanyalarla uygun
+        fiyata satın alabilirsiniz. Bu kategori, yeni evlenecek çiftler ve evini yenilemek isteyenler için farklı
+        markaları ve ürün çeşitlerini bir arada sunar. Bu sayede ihtiyaçlar kolay bir şekilde tamamlanır. Elektronik
+        kategori içerisinde ise beyaz eşya, küçük ev aletleri, Tv & görüntü, ses, giyilebilir teknoloji, tablet &
+        bilgisayar, elektronik aksesuarlar, kişisel bakım aletleri, oyunculara özel ürünler yer alır. İlgili başlık
+        altında satılan akıllı cep telefonları da geniş model yelpazeleri ile ön plana çıkar. iPhone 11 sıklıkla tercih
+        edilen cihazların başında gelir. iPhone 11 Pro Max modeli de tasarımı ve yüksek performansıyla dikkat çeker.
+        Dikkat çeken bir diğeri ise iPhone 12 Pro Max modelidir ve teknik özellikleri sayesinde adından sıkça söz
+        ettirir. Model çeşitliliği fiyat noktasında da kendini gösterir. İndirim günlerini takip ederek yapılan
+        ayrıcalıklardan yararlanabilirsiniz. Kişisel bakımınızı da kozmetik kategorisinde yer alan makyaj, cilt bakımı,
+        parfüm & deodorant, saç bakımı, epilasyon & tıraş ve genel bakım ürünleri sayesinde yerine getirebilirsiniz.
+        Marka çeşitliliği bu kategori için de geçerlidir. Teknolojik ürünlerin haricinde hazırlanan Saat & Aksesuar
+        grubu da ilgiyle takip edilir. Kadın, erkek ve çocuklar için üretilen birçok tasarım mevcuttur.</p>
+    </div>
+    <hr>
+
+    <!-- popular brands -->
+
+    <div class="container">
+      <div class="popular_brands_content d-flex">
+        <div class="popular_marka">
+          <div class="popular_marka_header" style="font-size: 22px; color: #333;">Popüler Marka ve Mağazalar</div>
+          <div class="popular_marka_content d-flex mt-3">
+            <ul style="font-size: 13px;">
+              <li><a href="#">Penti</a></li>
+              <li><a href="#">Watsos</a></li>
+              <li><a href="#">Columbia</a></li>
+              <li><a href="#">Puma</a></li>
+              <li><a href="#">Apple</a></li>
+              <li><a href="#">Xiaomi</a></li>
+            </ul>
+            <ul style="font-size: 13px;">
+              <li><a href="#">Mango</a></li>
+              <li><a href="#">The North Face</a></li>
+              <li><a href="#">Samsung</a></li>
+              <li><a href="#">Mudo</a></li>
+              <li><a href="#">Oppo</a></li>
+              <li><a href="#">Arçelik</a></li>
+            </ul>
+            <ul style="font-size: 13px;">
+              <li><a href="#">Vivense</a></li>
+              <li><a href="#">Beymen</a></li>
+              <li><a href="#">Derimod</a></li>
+              <li><a href="#">Huawei</a></li>
+              <li><a href="#">DYSON</a></li>
+              <li><a href="#">Koton</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="popular_magaza ms-5">
+          <div class="popular_marka_header" style="font-size: 22px; color: #333;">Popüler Marka ve Mağazalar</div>
+          <div class="popular_marka_content d-flex mt-3">
+            <ul style="font-size: 13px;">
+              <li><a href="#">Penti</a></li>
+              <li><a href="#">Watsos</a></li>
+              <li><a href="#">Columbia</a></li>
+              <li><a href="#">Puma</a></li>
+              <li><a href="#">Apple</a></li>
+              <li><a href="#">Xiaomi</a></li>
+            </ul>
+            <ul style="font-size: 13px;">
+              <li><a href="#">Mango</a></li>
+              <li><a href="#">The North Face</a></li>
+              <li><a href="#">Samsung</a></li>
+              <li><a href="#">Mudo</a></li>
+              <li><a href="#">Oppo</a></li>
+              <li><a href="#">Arçelik</a></li>
+            </ul>
+            <ul style="font-size: 13px;">
+              <li><a href="#">Vivense</a></li>
+              <li><a href="#">Beymen</a></li>
+              <li><a href="#">Derimod</a></li>
+              <li><a href="#">Huawei</a></li>
+              <li><a href="#">DYSON</a></li>
+              <li><a href="#">Koton</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <footer>
+    <div class="container-fluid footer-cont">
+      <div class="hid-footer d-flex">
+        <div class="trendyol me-5">
+          <ul>
+            <p style="font-size: 22px;">TRENDYOL</p>
+            <li>
+              <a href="#">Biz Kimiz</a>
+            </li>
+            <li>
+              <a href="#">Kariyer</a>
+            </li>
+            <li>
+              <a href="#">İletişim</a>
+            </li>
+            <li>
+              <a href="#">Trendyol'da Satış Yap</a>
+            </li>
+            <li style="font-weight: 600;">
+              <a href="#">Güvenli Alışveriş</a>
+              <div class="footer_payments">
+                <img style="width: 60px;" src="vendor/img/troy-logo-transparent.webp" alt="">
+                <img style="width: 60px;" src="vendor/img/footer-master-card.webp" alt="">
+                <img style="width: 60px;" src="vendor/img/footer-visa-black.webp" alt="">
+                <img style="width: 60px;" src="vendor/img/footer-amex.webp" alt="">
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="about_us me-5 ms-5">
+          <ul>
+            <p style="font-size: 22px;">About Us</p>
+            <li>
+              <a href="#">Who we are</a>
+            </li>
+            <li>
+              <a href="#">Careers</a>
+            </li>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
+            <li>
+              <a href="#">Sustainability</a>
+            </li>
+            <li style="font-weight: 600;">
+              <a href="#">Mobil Uygulamalar</a>
+              <div class="footer_social">
+                <img class="mb-2 mt-2" src="vendor/img/iosV2.svg" alt="">
+                <img class="mb-2" src="vendor/img/googleV2.svg" alt="">
+                <img src="vendor/img/huaweiV2.svg" alt="">
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="kampanyalar me-5 ms-5">
+          <ul>
+            <p style="font-size: 22px;">Kampanyalar</p>
+            <li>
+              <a href="#">Aktif Kampanyalar</a>
+            </li>
+            <li>
+              <a href="#">Elit Üyelik</a>
+            </li>
+            <li>
+              <a href="#">Hediye Fikirleri</a>
+            </li>
+            <li>
+              <a href="#">Trendyol Fırsatları</a>
+            </li>
+            <li style="font-weight: 600;">
+              <a href="#">Sosyal Medya</a>
+              <div class="sosyal_footer d-flex mt-2">
+                <img class="me-2" style="width: 30px;" src="vendor/img/facebookV2.svg" alt="">
+                <img class="me-2" style="width: 30px;" src="vendor/img/instagramV2.svg" alt="">
+                <img class="me-2" style="width: 30px;" src="vendor/img/twitterV2.svg" alt="">
+                <img style="width: 30px;" src="vendor/img/youtubeV2.svg" alt="">
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="yardim ms-5 me-5">
+          <ul>
+            <p style="font-size: 22px;">Yardım</p>
+            <li>
+              <a href="#">Sıkça Sorulan Sorular</a>
+            </li>
+            <li>
+              <a href="#">Canlı Yardım</a>
+            </li>
+            <li>
+              <a href="#">Nasıl İade Edebilirim</a>
+            </li>
+            <li>
+              <a href="#">İşlem Rehberi</a>
+            </li>
+            <button class="mt-2"
+              style="background-color: #000; border: 1px solid white; border-radius: 10px; color: #fff; font-size: 15px;">Ülke
+              Değştir</button>
+            <div class="footer_qr_hidden d-flex">
+              <div class="footer_qr">
+                <img class="mt-3 me-3" style="width: 90px;"
+                  src="vendor/img/png-transparent-qr-code-barcode-scanners-information-others-miscellaneous-text-rectangle.png"
+                  alt="">
+              </div>
+              <div class="footer_trgo d-flex align-items-center">
+                <img style="width: 60px; height: 50px;" src="vendor/img/trust-stamp.webp" alt="">
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="vendor/javascript/myScript.js"></script>
+  <!-- Initialize Swiper -->
+  <!-- <script>
+    var swiper = new Swiper('.swiper', {
+      slidesPerView: 6,
+      direction: getDirection(),
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      on: {
+        resize: function () {
+          swiper.changeDirection(getDirection());
+        },
+      },
+    });
+
+    function getDirection() {
+      var windowWidth = window.innerWidth;
+      var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+      return direction;
+    }
+  </script> -->
+</body>
+
+</html>
